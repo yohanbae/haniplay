@@ -17,8 +17,8 @@
 						Hooray~
 					</div>
 					<div v-else>
-						<div v-if="playing" class="clickbottom">click to pause</div>
-						<div v-else class="clickbottom">click to start</div>
+						<div v-if="playing" class="clickbottom">click or press enter to pause</div>
+						<div v-else class="clickbottom">click or press enter to start</div>
 					</div>
 				</v-progress-circular>
 				<v-progress-circular class="thepros-m" :rotate="-90" :size="200" :width="2" :value="getPercent()" color="teal">
@@ -27,8 +27,8 @@
 						Hooray~
 					</div>					
 					<div v-else>
-						<div v-if="playing" class="clickbottom">click to pause</div>
-						<div v-else class="clickbottom">click to start</div>
+						<div v-if="playing" class="clickbottom">click or press enter to pause</div>
+						<div v-else class="clickbottom">click or press enter to start</div>
 					</div>
 				</v-progress-circular>
 				<v-progress-circular class="thepros-med" :rotate="-90" :size="400" :width="2" :value="getPercent()" color="teal">
@@ -37,8 +37,8 @@
 						Hooray~
 					</div>					
 					<div v-else>
-						<div v-if="playing" class="clickbottom">click to pause</div>
-						<div v-else class="clickbottom">click to start</div>
+						<div v-if="playing" class="clickbottom">click or press enter to pause</div>
+						<div v-else class="clickbottom">click or press enter to start</div>
 					</div>
 				</v-progress-circular>				
 			</div>
@@ -109,6 +109,8 @@
 			</v-dialog>	
 
 		</div>
+		<Keypress key-event="keyup" :key-code="32" @success="onStart" />
+		<Keypress key-event="keyup" :key-code="13" @success="onStart" />
   </div>
 </template>
 
@@ -132,15 +134,18 @@
 			height: auto;
 		}
 		.thetitle{
+			margin-top:10px;
 			color:#008080;
-			font-weight:300;
-			font-size:20px;
+			font-weight:bold;
+			font-size:25px;
 			text-align:center;
 			margin-bottom:20px;
 			@media only screen and (min-width: 768px) {
 				text-align:left;
 				font-size:25px;
 				margin-bottom:0px;
+				margin-top:0px;
+				font-weight:300;
 			}
 		}		
 		.historybottom {
@@ -385,7 +390,9 @@
 }
 .schedule-wrap {
 	font-size:12px;
-	width:100px;
+	width:150px;
+	margin-left:100px;
+	margin-top:20px;
 	@media only screen and (min-width: 768px) {
 		margin-left: 30px;
 		margin-top:20px;

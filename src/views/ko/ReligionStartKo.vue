@@ -13,15 +13,15 @@
 		</div>
 		<div class="main">
 			<div class="main-wrap">
-				<img v-if="currentReligion===''" src="../assets/baby_defaults.png" alt="hh" />
-				<img v-if="currentReligion==='budah'" src="../assets/baby_budahs.png" alt="hh" />
-				<img v-if="currentReligion==='christian'" src="../assets/baby_christians.png" alt="hh" />
-				<img v-if="currentReligion==='hindi'" src="../assets/baby_hindus.png" alt="hh" />
-				<img v-if="currentReligion==='islam'" src="../assets/baby_islams.png" alt="hh" />
+				<img v-if="currentReligion===''" src="../../assets/baby_defaults.png" alt="hh" />
+				<img v-if="currentReligion==='budah'" src="../../assets/baby_budahs.png" alt="hh" />
+				<img v-if="currentReligion==='christian'" src="../../assets/baby_christians.png" alt="hh" />
+				<img v-if="currentReligion==='hindi'" src="../../assets/baby_hindus.png" alt="hh" />
+				<img v-if="currentReligion==='islam'" src="../../assets/baby_islams.png" alt="hh" />
 
 				<div class="conver-wrap">
 					<div v-if="initial">
-						<p>What religion world are you curious if you will go Heaven or Hell</p>
+						<p>알아보고 싶은 종교 세계관을 선택해주세요</p>
 					</div>
 
 					<div v-if="displayQuestion">
@@ -45,15 +45,19 @@
 
 				</div>
 				<div class="symbol-wrap">
+					<!-- <v-icon class="mr-3">mdi-christianity-outline </v-icon>
+					<v-icon class="mr-3">mdi-islam</v-icon>
+					<v-icon class="mr-3">mdi-buddhism</v-icon>
+					<v-icon class="mr-3">mdi-hinduism</v-icon> -->
 					<div class="pages">{{ currentPage }} / {{ totalPage}}</div>
 				</div>
 			</div>
 
 			<div v-if="initial">
-				<div class="selectWrap" @click="onSelect(1)">Budah</div>
-				<div class="selectWrap" @click="onSelect(2)">Christian</div>
-				<div class="selectWrap" @click="onSelect(3)">Hindi</div>
-				<div class="selectWrap" @click="onSelect(4)">Islam</div>
+				<div class="selectWrap" @click="onSelect(1)">불교</div>
+				<div class="selectWrap" @click="onSelect(2)">기독교</div>
+				<div class="selectWrap" @click="onSelect(3)">힌두교</div>
+				<div class="selectWrap" @click="onSelect(4)">이슬람교</div>
 			</div>
 
 			<div v-if="displayQuestion">
@@ -66,31 +70,31 @@
 			</div>
 
 			<div v-if="displayHeaven">
-				<div class="selectWrap" @click="onFinalResult">SEE THE RESULT</div>
+				<div class="selectWrap" @click="onFinalResult">결과보기</div>
 			</div>
 
 			<div v-if="displayResult">
-				<div class="selectWrap" v-if="!displayHeavenHow" @click="OnHowHeaven">HOW TO GO TO HEAVEN 100%?</div>
-				<div class="selectWrap" @click="onRestart">SEE OTHER RELIGIONS</div>
+				<div class="selectWrap" v-if="!displayHeavenHow" @click="OnHowHeaven">이 세계에서 좋은 곳으로 가려면?</div>
+				<div class="selectWrap" @click="onRestart">다른 종교 알아보기</div>
 				<div class="sns">
 					<ShareNetwork
 						network="facebook"
-						url="https://haniplay/religion"
+						url="https://haniplay/religion/ko"
 						:title="snsResult"
 						description="Find out if you will go to heaven or hell: "
 						quote="The hot reload is so fast it\'s near instant. - Evan You"
 						hashtags="vuejs,vite"
 					>
-						Share on Facebook
+						페이스북에 공유
 					</ShareNetwork>
 					<ShareNetwork
 						network="twitter"
-						url="https://haniplay/religion"
+						url="https://haniplay/religion/ko"
 						:title="`${snsResult}. Find if you will go to heaven or hell`"
 						quote="The hot reload is so fast it\'s near instant. - Evan You"
 						:hashtags="`heaven,hell,${hashtag}`"
 					>
-						Share on Twitter
+						트위터에 공유
 					</ShareNetwork>					
 				</div>
 			</div>				
@@ -259,10 +263,10 @@
 </style>
 
 <script>
-import {questionChristianCommon, questionChristianPoint, questionIslamCommon, questionIslamPoint, questionHindiCommon, questionHindiPoint,questionBudahCommon, questionBudahPoint } from "../library/questions"
+import {questionChristianCommon, questionChristianPoint, questionIslamCommon, questionIslamPoint, questionHindiCommon, questionHindiPoint,questionBudahCommon, questionBudahPoint } from "../../library/questionsKo"
 
 export default {
-  name: 'ReligionStart',
+  name: 'ReligionStartKo',
   components: {
     // HelloWorld
   },
@@ -325,7 +329,7 @@ export default {
 			this.generateCurrentQuestion()
 			this.displayQuestion = true
 
-			this.heavenHow = "In the Christian world, the only way to heaven is Jesus Christ. You must believe that Jesus died for your sin and accept him as your only savior and start your new life as Christian."
+			this.heavenHow = "기독교 세계관에서는 예수만이 유일한 구원자입니다. 예수가 죽음으로 당신의 죄값을 치뤘기 때문에, 당신은 지옥에 가지 않게 되었고, 이 사실을 믿고 예수를 영접하며 새 삶을 시작하면 당신은 천국에 갈 수 있습니다."
 		},
 		generateHindiQuestions: function() {
 			this.currentReligion = "hindi"
@@ -340,7 +344,7 @@ export default {
 			this.generateCurrentQuestion()
 			this.displayQuestion = true
 
-			this.heavenHow = "In the Hindu world, the true salvation isn't about going heaven. Even heaven and hell are temporary place in the reincarnation. The true salvation is getting out of the repeating circle. You must pay all the karma and love your gods."
+			this.heavenHow = "힌두교의 세계관에서 천국과 지옥은 윤회의 반복 속에 잠시 머무르는 장소일 뿐입니다. 진정한 구원은 고통의 윤회에서 업보를 치루고 자유해지는 것입니다. 이를 위해서는 업보를 갚고 당신의 신을 사랑해야 합니다. 만약 당신이 여자라면 먼저 남성으로 다시 태어나야합니다."
 		},		
 		generateIslamQuestions: function() {
 			this.currentReligion = "islam"
@@ -355,7 +359,7 @@ export default {
 			this.generateCurrentQuestion()
 			this.displayQuestion = true
 
-			this.heavenHow = "Islamic is about obedience. You must follow all the duties from Allah. You must confess your faith, five times of pray, offer donation, keep Ramadan fasting and visiting Mecca. This duties will lead you to the salvation."
+			this.heavenHow = "이슬람은 복종의 종교입니다. 알라신께서 당신에게 내린 명령을 수행해야 합니다. 특히 5가지 의무가 있습니다. 이슬람으로서의 신앙고백, 하루 다섯번의 기도, 가난한 자들을 위한 자선, 매년 라마단 금식, 메카의 성지순례를 행해야만 합니다. 이 다섯가지 의무를 지킬때 당신은 낙원으로 갈 확률이 높아지게 됩니다."
 		},
 		generateBudahQuestions: function() {
 			this.currentReligion = "budah"
@@ -370,7 +374,7 @@ export default {
 			this.generateCurrentQuestion()
 			this.displayQuestion = true
 
-			this.heavenHow = "In the Budah world, the true salvation isn't about going heaven. Even heaven and hell are temporary place in the reincarnation. The true salvation is getting out of the repeating suffering. You must pay all the karma and work hard and set you free from all the sufferings."
+			this.heavenHow = "불교세계에서는 해탈의 깨달음에 이르려면 깊은 수행이 필요합니다. 번뇌와 집착 욕망으로부터 벗어날 수있도록 수련에 정진하고 명상하십시오."
 		},		
 		generateCurrentQuestion: function() {
 			this.questionLoading = true
@@ -405,27 +409,27 @@ export default {
 			let heaven = ""
 			if(this.currentReligion === "christian") {
 				if(this.mainPoint >= 10) {
-					state = "You will go to heaven 100%"
+					state = "당신이 천국에 갈 확률은 100%입니다"
 				} else {
-					state="0%. You won't go to heaven. In the Christian world, only way to heaven is Jesus no matter how you are good or bad."
+					state="당신이 천국에 갈 확률은 0% 입니다 :("
 				}
-				heaven = "Heaven is being with God. The bible says there will be a New Jerusalem after the judgement day. There will be no sick, disease or death. Peace and joy will be forever with God. So will you be able to go to heaven?"
-				this.theway = "In the Christian world, Jesus is the only way to heaven in the Christian world. No matter how you are good or bad, you must accept Jesus is your savior that died for your sin."
+				heaven = "기독교의 천국이란 신과 함께 영원히 함께 하는 것입니다. 성경에서는 심판의 날때 세상이 불타고 새로운 예루살렘에 선택받은 자들이 들어갈거라고 합니다. 그곳에는 병자나 죽음 전쟁이 없을 것이고 항상 기쁨이 가득할 것입니다. 과연 당신은 이 천국에 들어갈 수 있을까요?"
+				// this.theway = "In the Christian world, Jesus is the only way to heaven in the Christian world. No matter how you are good or bad, you must accept Jesus is your savior that died for your sin."
 			}
 
 			if(this.currentReligion === "islam") {
 				if(this.jihad) {
-					state += "Jihad is the best way to heaven. No matter about your life style, you will go to heaven 100%. Congratulation."
+					state += "당신이 천국에 갈 확률은 100% 입니다. 지하드 성전은 무슬림으로서 위대한 행위입니다. 축하합니다."
 				}else {
 					if(this.mainPoint >= 5) {
-						state += "I'm so proud see you such a perfect Muslim. You did a great job. You did all duties. Your are good. However, it still depends on the great Allah. If Allah is in bad mood when you front him, then you might go to hell. Therefore, the possibility is 50%."
+						state += "당신이 천국에 갈 확률은 50%입니다. 당신은 모든 의무를 지켜낸 훌륭한 무슬림입니다! 하지만 결과는 오직 알라신에게만 달려있습니다. 만약 당신이 알라를 대면할 때 그의 기분이 좋지 않다면 당신은 지옥에 갈 수도 있습니다."
 					} else {
 						if(this.rich) {
-							state += "You didn't do all the duties as Muslim. However since you are a RICH, you can start doing good things such as helping people or donation. It's not late to be a good Muslim. Currently your possibility is 10%."
+							state += "당신이 천국에 갈 확률을 아주 낮습니다. 당신은 무슬림으로서 모든 의무를 행하지 않았습니다. 그러나 당신은 부자이므로 아직 기회가 남아있습니다. 지금부터라도 선행과 자선을 많이 베풀며 노력한다면 천국에 갈 수 있는 확률이 높아질 것입니다"
 						} else if(this.mainPoint > 1){
-							state += `You must work hard to keep doing the five duties as muslim. So far you did only ${this.mainPoint}. So far, ${this.mainPoint * 10}% posibility. Do not give up and let's work harder.`
+							state += `당신이 천국에 갈 확률은 ${this.mainPoint * 10}% 입니다`
 						}else {								
-							state += "0% possibility of going to heaven. I'm sorry to tell you that there's no salvation for you so far."
+							state += "당신이 천국에 갈 확률은 0%입니다"
 						}
 					}
 					
@@ -433,34 +437,34 @@ export default {
 						// state += "<br />Unfortunately the quran tell you about the heaven only for men. However theres interpretation that there gonna be a heaven for woman. Do not lose hope and keep work hard."
 					}
 				}
-				heaven = "Islamic is the paradise after your death. Each person will receive own paradise. There will be four beautiful women as your good servant, river of alcohol that you never get drunk. There's no Allah so you are completely free. You will be joyful and happy forever."
-				this.theway = "No matter how you are a good muslim, we are not sure. Some doctors say that Jihad is the only way to the heaven 100 percent. Jihad meant struggling hard to become a good muslim. Hope you dont give up and work hard."
+				heaven = "이슬람의 천국은 아름다운 낙원입니다. 그곳엔 술의 강이 흐르고 당신은 마셔도 마셔도 취하지 않을 것입니다. 또한 네명의 아름다운 처녀들이 당신을 기다리고 있을 것이며, 그중 하나는 당신의 현생에서 본 가장 아름다운 여인일 겁니다. 당신에겐 그 네명의 처녀들과 사랑을 나눌 무한한 힘이 주어집니다. 더이상 어려운 의무를 지키지않고 행복한 영생을 보내게 됩니다."
+				// this.theway = "No matter how you are a good muslim, we are not sure. Some doctors say that Jihad is the only way to the heaven 100 percent. Jihad meant struggling hard to become a good muslim. Hope you dont give up and work hard."
 			}
 
 			if(this.currentReligion === "hindi") {
 				if(this.mainPoint >= 5) {
 					if(this.gender === "male") {
-						state += "Congratulation. You are at high level of salvation. We don't know if this life would be your end of recycle however, you are at high level."
+						state += "축하합니다. 당신은 구원에 이르기위한 높은 단계에 다가가 있습니다. 어쩌면 이번 생이 윤회의 마지막 생일지도 모릅니다."
 					} else {
-						state += "You are a very good hindi. However since you are woman, you need to reborn as a man again. Hope do not lose your faith and keep working hard."
+						state += "당신은 아주 훌륭한 힌두교인입니다. 그러나 안타깝게도 당신은 여성입니다. 윤회의 고통에서 벗어나려면 먼저 남성으로 환생해야만 합니다. 희망을 잃지말고 수련에 정진하세요."
 					}
 				} else {
-					state += "Sadly you are not there yet. You stil need more hard works to do."
+					state += "안타깝게도 당신에게 쌓인 업보가 많습니다. 더 많은 수행이 필요합니다."
 				}
 
-				heaven = "Hindi's heaven is temporary place to stay. Eventually you will be reborn to the suffering world. The true salvation is to get out of the cycle and become free. Becoming a God. You must work hard to have a good karma."
-				this.theway = "To set free from the reincarnation, you must work hard to have a good karma. If you are woman, you must born as a man first. It will be helpful if you are Brahmin. You must keep serve and love your god."
+				heaven = "힌두교에서 천국이란 윤회의 반복속에서 잠시 머무를 뿐인 장소입니다. 진정한 구원은 반복되는 윤회에서 벗어나는 것입니다. 이를위해 업보를 갚기위한 노력이 필요합니다."
+				// this.theway = "To set free from the reincarnation, you must work hard to have a good karma. If you are woman, you must born as a man first. It will be helpful if you are Brahmin. You must keep serve and love your god."
 			}
 
 			if(this.currentReligion === "budah") {
 				if(this.mainPoint >= 5) {
-					state += "Congratulation. You are at high level of salvation. We don't know if this life would be your end of recycle however, you are at high level."
+					state += "훌륭합니다. 당신은 해탈에 가까운 경지에 이르렀습니다. 어쩌면 이번 생이 윤회의 마지막 생일지도 모릅니다. 더 수련에 정진하십시오."
 				} else {
-					state += "Sadly you are not there yet."
+					state += "안타깝게도 아직 더 많은 수행이 필요합니다."
 				}
 
-				heaven = "Budaism's heaven is temporary place to stay. Eventually you will be reborn to the suffering world. The true salvation is to get out of the cycle and become free. Becoming a God. You must work hard to have a good karma."
-				this.theway = "To set free from the reincarnation, you must work hard to have a good karma. If you are woman, you must born as a man first. It will be helpful if you are Brahmin. You must keep serve and love your god."
+				heaven = "불교의 세계관에서 천국 깨달음을 얻어 더 이상 윤회하지 않아도 되는 곳입니다. 해탈에 이르는 깨달음을 업기까지 업보를 갚고 수련에 정진해야 합니다"
+				// this.theway = "To set free from the reincarnation, you must work hard to have a good karma. If you are woman, you must born as a man first. It will be helpful if you are Brahmin. You must keep serve and love your god."
 			}
 
 
@@ -490,6 +494,8 @@ export default {
 			// this.$router.push('/religion/jp')					
 			}
 		},
+
+
 	},
 
 }

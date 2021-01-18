@@ -2,11 +2,13 @@ import Vue from 'vue'
 import VueYouTubeEmbed, { getIdFromURL } from 'vue-youtube-embed'
 import moment from 'moment';
 import 'moment-duration-format';
-
 Vue.use(VueYouTubeEmbed)
 
 export default {
 	name: 'Study',
+	components: {
+		Keypress: () => import('vue-keypress')
+	},
 	data: function() {
 		return {
 			time: 0,

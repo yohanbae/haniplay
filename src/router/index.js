@@ -48,7 +48,33 @@ const routes = [
       }
     ]
     } 
-  },  
+  },
+  { path: '/religion/ko', name: 'ReligionKo', component: () => import('../views/ko/ReligionKo.vue'), meta: { title: 'HEAVEN or HELL',
+    metaTags: [
+      {
+        name: 'description',
+        content: 'Will I go to heaven or hell?'
+      },
+      {
+        property: 'og:description',
+        content: 'Will I go to heaven or hell?'
+      }
+    ]
+    } 
+  },
+  { path: '/religion/ko/start', name: 'ReligionStartKo', component: () => import('../views/ko/ReligionStartKo.vue'), meta: { title: 'HEAVEN or HELL',
+    metaTags: [
+      {
+        name: 'description',
+        content: 'Will I go to heaven or hell?'
+      },
+      {
+        property: 'og:description',
+        content: 'Will I go to heaven or hell?'
+      }
+    ]
+    } 
+  },    
 ]
 
 const router = new VueRouter({
