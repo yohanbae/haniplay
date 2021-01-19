@@ -74,6 +74,19 @@ const routes = [
       }
     ]
     } 
+  },
+  { path: '/egg', name: 'Egg', component: () => import('../views/egg/Egg.vue'), meta: { title: 'Egg Boiled Timer',
+    metaTags: [
+      {
+        name: 'description',
+        content: 'Online Timer for Boiling Egg'
+      },
+      {
+        property: 'og:description',
+        content: 'Online Timer for Boiling Egg'
+      }
+    ]
+    } 
   },    
 ]
 
