@@ -107,6 +107,7 @@
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mali&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
 
 .main-wrap {
 	border:1px solid rgba(0,0,0,0);
@@ -121,18 +122,22 @@
 	}
 
 	.conver-wrap {
-		background: rgba(255,255,255, 0.4);
+		background:white;
 		font-family: 'Mali', cursive;
 		font-size:15px;
 		text-align: center;
 		padding:20px 5px;
 		border-radius:10px;
+
+		-webkit-box-shadow: 3px 3px 3px 0px rgba(79,79,79,1);
+		-moz-box-shadow: 3px 3px 3px 0px rgba(79,79,79,1);
+		box-shadow: 3px 3px 3px 0px rgba(79,79,79,1);
 		@media only screen and (min-width: 1275px) {
-			border-top:20px solid lightblue;
-			border-radius:0px;
+			// border-top:20px solid lightblue;
+			border-radius:5px;
 			min-height:200px;
 			font-size:25px;
-			margin-top:100px;
+			margin-top:100px; 
 			padding: 30px;
 			padding-left: 280px;
 			text-align: left;
@@ -160,23 +165,23 @@
 
 .selectWrap {
 	padding:10px 20px;
-	border:1px solid lightgrey;
+	border:2px solid #60a0d1;
 	margin-bottom:15px;
 	text-align: center;
 	cursor: pointer;
-	background: lightblue;
-	transition:500ms;
-		font-family: 'Mali', cursive;
-
+	background: white;
+	font-family: 'Mali', cursive;
+	color: #2a4559;
 	&:hover{
-		background:white;
+		background:#60a0d1;
+		color:white;
 	}
 }
 
 
 .header {
   height: 40px;
-  background:lightblue;
+  // background:lightblue;
   position: absolute;
   width:100%;
   left:0; top:0;
@@ -184,17 +189,9 @@
 	align-items:center;
 	grid-template-columns: 1fr 1fr;
 	.titles {
-		font-family: 'Sigmar One', cursive;
+		font-family: 'Potta One', cursive;
 		font-size:14px;
-		background-color: #f3ec78;
-		background-image: linear-gradient(45deg, #b33b29, #af4261);
-		background-size: 100%;
-		-webkit-background-clip: text;
-		-moz-background-clip: text;
-		-webkit-text-fill-color: transparent; 
-		-moz-text-fill-color: transparent;
-		-webkit-text-stroke-width: 1px;
-		-webkit-text-stroke-color: rgba(255,255,255,0.9);
+		color: #af4261;
 		width:200px;
 		margin-left:20px;
 		cursor:pointer;
@@ -223,9 +220,9 @@
 .main {
 	padding:20px;
   width:100%; min-height:100vh;
-  background: #2980B9;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #FFEFBA;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	@media only screen and (min-width: 768px) {
 		padding: 50px 20%;
 	}
@@ -233,7 +230,7 @@
 
 .footer {
   height:30px;
-  background:lightblue;
+  // background:lightblue;
   position: absolute;
   width:100%;
   left:0; bottom:0;
@@ -242,6 +239,7 @@
   align-items: center;
   text-align: center;
 	z-index: 100;
+	border-top:1px solid lightgray;
 }
 
 .sns {
@@ -259,6 +257,7 @@
 		font-size:15px;
 	}
 }
+
 
 </style>
 
