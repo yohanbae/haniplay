@@ -121,7 +121,8 @@ export default {
 			return moment.duration(this.todayTotal, "seconds").format("h:mm:ss")			
 		},		
 		getTodayDate: function() {
-			return moment().format("LL").toString().toUpperCase()
+			// return moment().format("LL").toString().toUpperCase()
+			return moment().format("dddd, MMM DD").toString().toUpperCase()
 		},
 		onYoutube: function(id) {
 			this.youtubeLoaded = false

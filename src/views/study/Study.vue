@@ -8,7 +8,7 @@
 			</div>
 			<div class="topleft2">
 				{{getTodayDate()}}<br/>
-				{{getTotalTime()}} HOURS TODAY
+				{{getTotalTime()}} HOURS
 			</div>
 			<div class="time-wrap" @click="onStart">
 				<v-progress-circular class="thepros" :rotate="-90" :size="600" :width="2" :value="getPercent()" color="teal">
@@ -107,7 +107,12 @@
 					</v-card-text>
 				</v-card>
 			</v-dialog>	
-
+			<div class="tip">
+				<strong>Tips</strong><br />
+				Set the study time and keep it everyday with your favorite focus music channel<br /><br />
+				Make sure lower the youtube quality so you won't waste your data.<br /><br />
+				You can save up to four youtube channels. All the credits will go to the channel owner.
+			</div>
 		</div>
 		<Keypress key-event="keyup" :key-code="32" @success="onStart" />
 		<Keypress key-event="keyup" :key-code="13" @success="onStart" />
@@ -358,7 +363,7 @@
 			font-size: 13px;
 			color:#008080;
 			cursor:pointer;
-			margin-top:20px;			
+			margin-top:30px;			
 			margin-bottom:30px;
 			text-align:center;
 			&:hover{
@@ -370,6 +375,17 @@
 			}
 		}
 
+		.tip{
+			font-size: 13px;
+			text-align: center;
+			padding: 0 10px;
+			margin-bottom:30px;
+			@media only screen and (min-width: 768px) {
+				text-align:left;
+				padding:0;
+				margin-bottom:0px;
+			}			
+		}
 	} // Youtube Side END
 
 } // Main-Wrap END
