@@ -10,19 +10,25 @@
 				{{ eggStyle==='hard' ? "10" : null }} minutes
 			</button>
 			<v-dialog v-model="eggStyleDialog" width="350">
-				<v-card>
-					<v-card-title class="headline grey lighten-2">
+				<v-card class="theselectwrap">
+					<div class="wraptitle">
 						Select Egg Style
-					</v-card-title>
+					</div>
 					<div class="theinside">
-						<div class="egg-style" @click="onSelectStyle(1)">SOFT BOILED</div>
-						<div class="egg-style" @click="onSelectStyle(2)">HARD BOILED</div>
+						<div class="egg-style" @click="onSelectStyle(1)">
+							<div>SOFT BOILED</div>
+							<img src="../../assets/egg.png" alt="sm" />
+						</div>
+						<div class="egg-style" @click="onSelectStyle(2)">
+							<div>HARD BOILED</div>
+							<img src="../../assets/egg.png" alt="sm" />
+						</div>
 					</div>
 				</v-card>
 			</v-dialog>
 
 			<div class="egg-part">
-				<div class="describe">Add egg into the boiling water<br /> and tab the START button</div>
+				<div class="describe">Add egg into the boiling water<br /> Then tab this START button</div>
 
 				<div v-if="!playing" @click="onStart">
 					<img src="../../assets/egg.png" alt="haha" />
@@ -63,22 +69,29 @@
 		font-family: 'Hachi Maru Pop', cursive;
 		margin: 50px 0;
 		font-weight:bold;
+		font-size:25px;
 	}
 	.theselect {
 		background:white;
-		border:none;
-		padding: 5px 30px;
-		font-size:14px;
+		width: 250px;
+		text-align: center;
+		padding:4px 0;
+		font-size:20px;
 		border-radius:5px;
 		margin-bottom:50px;
+		border:2px solid lightgray;
+		&:focus{
+			outline: none;
+		}
 	}
 
 	.egg-part {
-		font-size:14px;
+		font-size:20px;
 		margin-bottom:100px;
 		.describe {
 			padding: 0px 20px;
 			margin-bottom:50px;
+			font-size: 20px;
 		}
 		img {
 			width: 100px;
@@ -87,19 +100,33 @@
 	}
 }
 
-.theinside {
-	margin:20px 0;
-	background:white;
-	.egg-style {
-		border-radius:5px;
-		border:1px solid lightgray;
-		padding:10px 0px;
-		text-align:center;
-		margin-bottom:10px;
-		cursor:pointer;
-		&:hover{
-			background: gray;
-			color:white;
+.theselectwrap {
+	padding:20px;
+	.wraptitle {
+		text-align: center;
+		font-size:25px;
+	}
+	.theinside {
+		margin:20px 0;
+		background:white;
+		.egg-style {
+			border-radius:5px;
+			border:1px solid lightgray;
+			padding:10px 0px;
+			padding-left:30px;
+			margin-bottom:10px;
+			display: grid;
+			grid-template-columns: 1fr 50px;
+			align-items: center;
+			text-align:left;
+
+			cursor:pointer;
+			&:hover{
+				background: gray;
+				color:white;
+			}
+			img { width: 30px; height:30px; }
+
 		}
 	}
 }
@@ -111,7 +138,7 @@
 	border:1px solid lightgray;
 	border-radius:5px;
 	.progress-text {
-		font-size:12px;
+		font-size:20px;
 	}
 }
 
@@ -132,7 +159,7 @@ export default {
 			eggStyleDialog: false,
 			loaded: true,
 			totalTime: 420,
-			time: 50,
+			time: 0,
 			playing: false,
 			running: null,
 			audio: null
