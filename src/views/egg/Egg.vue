@@ -68,7 +68,6 @@
 	.thetitle {
 		font-family: 'Hachi Maru Pop', cursive;
 		margin: 50px 0;
-		font-weight:bold;
 		font-size:25px;
 	}
 	.theselect {
