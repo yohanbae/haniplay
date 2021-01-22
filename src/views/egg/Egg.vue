@@ -8,6 +8,7 @@
 				boiled 
 				{{ eggStyle==='soft' ? "7" : null }}
 				{{ eggStyle==='hard' ? "10" : null }} minutes
+				<v-icon right>mdi-menu-down-outline</v-icon>
 			</button>
 			<v-dialog v-model="eggStyleDialog" width="350">
 				<v-card class="theselectwrap">
@@ -30,7 +31,7 @@
 			<div class="egg-part">
 				<div class="describe">Add egg into the boiling water<br /> Then tab this START button</div>
 
-				<div v-if="!playing" @click="onStart">
+				<div class="egg-click" v-if="!playing" @click="onStart">
 					<img src="../../assets/egg.png" alt="haha" />
 					<div>START</div>
 				</div>
@@ -95,6 +96,9 @@
 		img {
 			width: 100px;
 			height:100px;
+		}
+		.egg-click{
+			cursor: pointer;
 		}
 	}
 }
