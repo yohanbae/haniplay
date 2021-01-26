@@ -11,7 +11,7 @@ export const questionChristianCommon = [
 		{ ans: "YES", type:"common", point:1 },
 		{ ans: "NO", type:"common", point:1 },
 	] },
-	{ question: "Do you read bible every day?", answer: [
+	{ question: "Do you read the bible every day?", answer: [
 		{ ans: "YES", type:"common", point:1 },
 		{ ans: "NO", type:"common", point:1 },		
 	] },
@@ -31,6 +31,34 @@ export const questionChristianCommon = [
 		{ ans: "YES", type:"common", point:1 },
 		{ ans: "NO", type:"common", point:1 },		
 	] },	
+	{ question: "Do you like Charles Darwin?", answer: [
+		{ ans: "YES", type:"common", point:1 },
+		{ ans: "NO", type:"common", point:1 },		
+	] },		
+	{ question: "Do you like Marilyn Manson?", answer: [
+		{ ans: "YES", type:"common", point:1 },
+		{ ans: "NO", type:"common", point:1 },		
+	] },			
+	{ question: "Do you like BTS?", answer: [
+		{ ans: "YES", type:"common", point:1 },
+		{ ans: "NO", type:"common", point:1 },		
+	] },	
+	{ question: "Are you rich?", answer: [
+		{ ans: "YES", type:"common", point:1 },
+		{ ans: "NO", type:"common", point:1 },		
+	] },		
+	{ question: "Do you have any Christian in your family?", answer: [
+		{ ans: "YES", type:"common", point:1 },
+		{ ans: "NO", type:"common", point:1 },		
+	] },				
+	{ question: "Are you tall or short?", answer: [
+		{ ans: "Tall", type:"common", point:1 },
+		{ ans: "Short", type:"common", point:1 },		
+	] },		
+	{ question: "Are you trying hard to be nice to others?", answer: [
+		{ ans: "YES", type:"common", point:1 },
+		{ ans: "NO", type:"common", point:1 },		
+	] },		
 ]
 
 export const questionChristianPoint = [
@@ -38,10 +66,6 @@ export const questionChristianPoint = [
 		{ ans: "YES", type:"main", point:1 },
 		{ ans: "NO", type:"main", point:0 },
 	] },
-	// { question: "Do you accept Jesus Christ as the only savior that give you to salvation?", answer: [
-	// 	{ ans: "YES", type:"main", point:10 },
-	// 	{ ans: "NO", type:"main", point:0 },		
-	// ] },	
 ]
 
 
@@ -74,6 +98,10 @@ export const questionIslamCommon = [
 		{ ans: "YES", type:"common", point:0 },
 		{ ans: "NO", type:"common", point:1 },		
 	] },	
+	{ question: "How do you think about Niche?", answer: [
+		{ ans: "I like him", type:"common", point:0 },
+		{ ans: "I don't like him", type:"common", point:1 },		
+	] },	
 ]
 
 
@@ -82,41 +110,37 @@ export const questionIslamPoint = [
 		{ ans: "man", type:"gender", point:1 },
 		{ ans: "woman", type:"gender", point:2 }
 	] },
-	{ question: "!Have you been to Meccah?", answer: [
+	{ question: "Have you been to Meccah?", answer: [
 		{ ans: "Good", type:"main", point:1 },
 		{ ans: "Bad", type:"main", point:0 },
 	] },	
-	{ question: "!Do you fasting during Ramadan?", answer: [
+	{ question: "Do you fast during Ramadan?", answer: [
 		{ ans: "Yes", type:"main", point:1 },
 		{ ans: "No", type:"main", point:0 },
 	] },		
-	{ question: "!Are you RICH?", answer: [
+	{ question: "Are you rich?", answer: [
 		{ ans: "man", type:"rich", point:1 },
 		{ ans: "woman", type:"rich", point:0 }
 	] },	
-	{ question: "!Do you pray five times a day?", answer: [
+	{ question: "Do you pray five times a day?", answer: [
 		{ ans: "YES", type:"main", point:1 },
 		{ ans: "NO", type:"main", point:0 },
 	] },
-	{ question: "!Do you donate often?", answer: [
+	{ question: "Do you donate often?", answer: [
 		{ ans: "YES", type:"main", point:1 },
 		{ ans: "NO", type:"main", point:0 },
 	] },
-	{ question: "!Do you faithfully accept that 'There is no God but Allah, and Muhammad is his messenger'", answer: [
+	{ question: "Do you faithfully accept that 'There is no God but Allah, and Muhammad is his messenger'", answer: [
 		{ ans: "YES", type:"main", point:1 },
 		{ ans: "NO", type:"main", point:0 },		
 	] },	
-	{ question: "!Are you willing to give up your life to kill your religious enemy?", answer: [
+	{ question: "Are you willing to give up your life to kill your religious enemy for Allah?", answer: [
 		{ ans: "YES", type:"jihad", point:1 },
 		{ ans: "NO", type:"jihad", point:0 },
 	] },
 ]
 
 export const questionHindiCommon = [
-	{ question: "Are you over 20 years old?", answer: [
-		{ ans: "YES", type:"common", point:1 },
-		{ ans: "NO", type:"common", point:1 },
-	] },
 	{ question: "Are you satisfied with your life?", answer: [
 		{ ans: "YES", type:"common", point:1 },
 		{ ans: "NO", type:"common", point:1 },
@@ -129,7 +153,7 @@ export const questionHindiCommon = [
 		{ ans: "YES", type:"common", point:1 },
 		{ ans: "NO", type:"common", point:2 }
 	] },
-	{ question: "How is your grades in school? High or low?", answer: [
+	{ question: "How are your grades in school? High or low?", answer: [
 		{ ans: "High", type:"common", point: 1 },
 		{ ans: "Low", type:"common", point: 0 },
 	] },
@@ -164,7 +188,7 @@ export const questionHindiPoint = [
 		{ ans: "Man", type:"gender", point:1 },
 		{ ans: "Woman", type:"gender", point:2 },
 	] },
-	{ question: "Do you work hard to bring a good karma?", answer: [
+	{ question: "Do you work hard to get good karma?", answer: [
 		{ ans: "YES", type:"main", point:1 },
 		{ ans: "NO", type:"main", point:0 },		
 	] },		
@@ -205,7 +229,7 @@ export const questionBudahCommon = [
 		{ ans: "YES", type:"common", point:1 },
 		{ ans: "NO", type:"common", point:2 }
 	] },
-	{ question: "How is your grades in school? High or low?", answer: [
+	{ question: "How are your grades in school? High or low?", answer: [
 		{ ans: "High", type:"common", point: 1 },
 		{ ans: "Low", type:"common", point: 0 },
 	] },
@@ -225,6 +249,14 @@ export const questionBudahCommon = [
 		{ ans: "YES", type:"common", point: 1 },
 		{ ans: "NO", type:"common", point: 0 },		
 	] },		
+	{ question: "Are you bald head?", answer: [
+		{ ans: "YES", type:"common", point: 1 },
+		{ ans: "NO", type:"common", point: 0 },		
+	] },		
+	{ question: "Do you have any Buddhist in your family?", answer: [
+		{ ans: "YES", type:"common", point:1 },
+		{ ans: "NO", type:"common", point:1 },		
+	] },			
 ]
 
 export const questionBudahPoint = [
@@ -240,7 +272,7 @@ export const questionBudahPoint = [
 		{ ans: "Man", type:"gender", point:1 },
 		{ ans: "Woman", type:"gender", point:2 },
 	] },
-	{ question: "Do you work hard to bring a good karma?", answer: [
+	{ question: "Do you work hard to get good karma?", answer: [
 		{ ans: "YES", type:"main", point:1 },
 		{ ans: "NO", type:"main", point:0 },		
 	] },		

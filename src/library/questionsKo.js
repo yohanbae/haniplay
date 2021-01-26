@@ -30,7 +30,35 @@ export const questionChristianCommon = [
 	{ question: "십일조 헌금해봤어요?", answer: [
 		{ ans: "네", type:"common", point:1 },
 		{ ans: "아니오", type:"common", point:1 },		
+    ] },	
+	{ question: "찰스 다윈을 좋아하나요?", answer: [
+		{ ans: "네", type:"common", point:1 },
+		{ ans: "아니오", type:"common", point:1 },		
+	] },		
+	{ question: "마릴린 맨슨을 좋아하나요?", answer: [
+		{ ans: "네", type:"common", point:1 },
+		{ ans: "아니오", type:"common", point:1 },			
+	] },			
+	{ question: "방탄소년단을 좋아하나요?", answer: [
+		{ ans: "네", type:"common", point:1 },
+		{ ans: "아니오", type:"common", point:1 },			
 	] },	
+	{ question: "당신은 부자입니까?", answer: [
+		{ ans: "네", type:"common", point:1 },
+		{ ans: "아니오", type:"common", point:1 },			
+	] },		
+	{ question: "가족중에 기독교인이 있나요?", answer: [
+		{ ans: "네", type:"common", point:1 },
+		{ ans: "아니오", type:"common", point:1 },			
+	] },				
+	{ question: "당신은 키가 큰가요 작은가요?", answer: [
+		{ ans: "큰 편", type:"common", point:1 },
+		{ ans: "작은 편", type:"common", point:1 },		
+	] },		
+	{ question: "다른 사람에게 잘해주려고 노력하는 편입니까?", answer: [
+		{ ans: "네", type:"common", point:1 },
+		{ ans: "아니오", type:"common", point:1 },			
+	] },		    
 ]
 
 export const questionChristianPoint = [
@@ -38,10 +66,6 @@ export const questionChristianPoint = [
 		{ ans: "네", type:"main", point:1 },
         { ans: "아니오", type:"main", point:0 },        
 	] },
-	// { question: "Do you accept Jesus Christ as the only savior that give you to salvation?", answer: [
-	// 	{ ans: "YES", type:"main", point:10 },
-	// 	{ ans: "NO", type:"main", point:0 },		
-	// ] },	
 ]
 
 
@@ -73,7 +97,11 @@ export const questionIslamCommon = [
 	{ question: "5명 이상의 아내/남편이 있습니까?", answer: [
 		{ ans: "네", type:"common", point:0 },
 		{ ans: "아니오", type:"common", point:1 },		
-	] },	
+    ] },	
+	{ question: "니체에 대해 어떻게 생각하십니까?", answer: [
+		{ ans: "니체를 좋아합니다", type:"common", point:0 },
+		{ ans: "니체를 싫어합니다", type:"common", point:1 },		
+	] },	    
 ]
 
 
@@ -106,17 +134,13 @@ export const questionIslamPoint = [
 		{ ans: "네", type:"main", point:1 },
 		{ ans: "아니오", type:"main", point:0 },		
 	] },	
-	{ question: "당신은 지하드를 행할 것입니까. 지하드는 욕망을 끊기위한 사투이며, 전쟁에서 목숨걸고 적에게 대항하는 것입니다", answer: [
+	{ question: "당신은 지하드를 행할 것입니까. 지하드는 욕망을 끊기위한 사투이며, 신을 위해 전쟁에서 목숨걸고 적에게 대항하는 것입니다", answer: [
 		{ ans: "네", type:"jihad", point:1 },
 		{ ans: "아니오", type:"jihad", point:0 },
 	] },
 ]
 
 export const questionHindiCommon = [
-	{ question: "나이가 어떻게 되요? 20살 이상인가요?", answer: [
-		{ ans: "네", type:"common", point:1 },
-		{ ans: "아니오", type:"common", point:1 },
-	] },
 	{ question: "현재의 삶이 만족스럽나요?", answer: [
 		{ ans: "네", type:"common", point:1 },
 		{ ans: "아니오", type:"common", point:1 },
@@ -220,7 +244,15 @@ export const questionBudahCommon = [
 	{ question: "당신은 부지런한 편인가요?", answer: [
 		{ ans: "네", type:"common", point: 1 },
 		{ ans: "아니오", type:"common", point: 0 },		
-	] },		
+    ] },		
+	{ question: "당신은 대머리인가요?", answer: [
+		{ ans: "네", type:"common", point: 1 },
+		{ ans: "아니오", type:"common", point: 0 },		
+    ] },	    
+	{ question: "가족중에 불교신자가 있나요?", answer: [
+		{ ans: "네", type:"common", point: 1 },
+		{ ans: "아니오", type:"common", point: 0 },		
+	] },	        
 ]
 
 export const questionBudahPoint = [

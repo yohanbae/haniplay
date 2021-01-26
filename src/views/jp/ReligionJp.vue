@@ -179,7 +179,7 @@
 <script>
 
 export default {
-  name: 'ReligionKo',
+  name: 'ReligionJp',
   components: {
     // HelloWorld
   },
@@ -190,7 +190,7 @@ export default {
 	},
 	methods: {
 		onStart: function() {
-			this.$router.push(`/religion/ko/start`)
+			this.$router.push(`/religion/jp/start`)
 		}
 	},
 }

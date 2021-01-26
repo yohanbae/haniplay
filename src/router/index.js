@@ -75,6 +75,32 @@ const routes = [
     ]
     } 
   },
+  { path: '/religion/jp', name: 'ReligionJp', component: () => import('../views/jp/ReligionJp.vue'), meta: { title: 'HEAVEN or HELL',
+    metaTags: [
+      {
+        name: 'description',
+        content: 'Will I go to heaven or hell?'
+      },
+      {
+        property: 'og:description',
+        content: 'Will I go to heaven or hell?'
+      }
+    ]
+    } 
+  },
+  { path: '/religion/jp/start', name: 'ReligionStartJp', component: () => import('../views/jp/ReligionStartJp.vue'), meta: { title: 'HEAVEN or HELL',
+    metaTags: [
+      {
+        name: 'description',
+        content: 'Will I go to heaven or hell?'
+      },
+      {
+        property: 'og:description',
+        content: 'Will I go to heaven or hell?'
+      }
+    ]
+    } 
+  },
   { path: '/egg', name: 'Egg', component: () => import('../views/egg/Egg.vue'), meta: { title: 'Egg Boiled Timer',
     metaTags: [
       {

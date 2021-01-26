@@ -23,7 +23,7 @@
 			<button class="thebutton mt-5" @click="onStart">START GAME</button>
 		</div>
     <div class="footer">
-      Hanison - All rights reserved : Contact
+      Hanison - All rights reserved
     </div>
   </div>
 </template>
@@ -46,7 +46,7 @@
 	.conver-wrap {
 		background:white;
 		font-family: 'Mali', cursive;
-		font-size:15px;
+		font-size:18px;
 		text-align: center;
 		padding:20px 5px;
 		border-radius:10px;
@@ -153,8 +153,8 @@
 	padding:20px;
   width:100%; height:100vh;
 	background: #FFEFBA;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	// background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+	// background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	@media only screen and (min-width: 768px) {
 		padding: 50px 20%;
 	}
@@ -162,7 +162,7 @@
 
 .footer {
   height:30px;
-  background:rgba(135, 188, 245, 0.5);
+	border-top:1px solid lightgray;
   position: absolute;
   width:100%;
   left:0; bottom:0;

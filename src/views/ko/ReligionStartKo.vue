@@ -5,8 +5,8 @@
 
 			<div class="lang-wrap">
 				<select class="lang" name="language" id="cars" @change="onLanguage($event)">
-					<option value="eng">English</option>
 					<option value="kor">Korean</option>
+					<option value="eng">English</option>
 					<option value="jap">Japanese</option>
 				</select>
 			</div>
@@ -32,14 +32,19 @@
 					</div>
 
 					<div v-if="displayHeaven">
+						<div class="title">설문이 모두 끝났습니다!</div>
 						{{heavenResult}}
+						<div class="title2">아래 버튼을 눌러 결과를 확인하세요</div>
 					</div>
 
 					<div v-if="displayResult && !displayHeavenHow">
+						<div class="title">결과</div>
 						{{finalResult}}
+						<div class="title2">아래 버튼을 눌러 더 알아봅시다</div>
 					</div>
 
 					<div v-if="displayHeavenHow">
+						<div class="title">구원이란 어떻게 가능할까?</div>
 						{{heavenHow}}
 					</div>
 
@@ -64,7 +69,7 @@
 				<div v-if="questionLoading">Loading</div>		
 				<div v-else>
 					<div v-for="(choice, i) in currentQuestion.answer" v-bind:key="i">
-						<div class="selectWrap" @click="selectAnswer(choice.type, choice.point)">{{choice.ans}} : {{choice.point}}</div>
+						<div class="selectWrap" @click="selectAnswer(choice.type, choice.point)">{{choice.ans}}</div>
 					</div>
 				</div>
 			</div>
@@ -74,7 +79,7 @@
 			</div>
 
 			<div v-if="displayResult">
-				<div class="selectWrap" v-if="!displayHeavenHow" @click="OnHowHeaven">이 세계에서 좋은 곳으로 가려면?</div>
+				<div class="selectWrap" v-if="!displayHeavenHow" @click="OnHowHeaven">이 종교세계에서 구원받으려면?</div>
 				<div class="selectWrap" @click="onRestart">다른 종교 알아보기</div>
 				<div class="sns">
 					<ShareNetwork
@@ -82,17 +87,17 @@
 						url="https://haniplay/religion/ko"
 						:title="snsResult"
 						description="Find out if you will go to heaven or hell: "
-						quote="The hot reload is so fast it\'s near instant. - Evan You"
-						hashtags="vuejs,vite"
+						quote="Heaven or Hell"
+						hashtags="천국,지옥,기독교,이슬람,불교,힌두교"
 					>
 						페이스북에 공유
 					</ShareNetwork>
 					<ShareNetwork
 						network="twitter"
 						url="https://haniplay/religion/ko"
-						:title="`${snsResult}. Find if you will go to heaven or hell`"
-						quote="The hot reload is so fast it\'s near instant. - Evan You"
-						:hashtags="`heaven,hell,${hashtag}`"
+						:title="`Heaven or Hell? ${snsResult}. 내가 죽어서 어디에 가게될지 종교별로 알아보기`"
+						quote="Heaven or Hell"
+						hashtags="천국,지옥,기독교,이슬람,불교,힌두교"
 					>
 						트위터에 공유
 					</ShareNetwork>					
@@ -100,7 +105,7 @@
 			</div>				
 
 		</div>
-		<div class="footer">Hanison - All rights reserved : Contact</div>
+		<div class="footer">Hanison - All rights reserved</div>
   </div>
 </template>
 
@@ -142,6 +147,17 @@
 			padding-left: 280px;
 			text-align: left;
 		}		
+
+		.title {
+			font-size:20px;
+			color:#af4261;
+			margin:20px 0;
+		}
+		.title2 {
+			font-size:14px;
+			color:#af4261;
+			margin:20px 0;
+		}				
 	}
 	img {
 		width:100px;
@@ -221,8 +237,8 @@
 	padding:20px;
   width:100%; min-height:100vh;
 	background: #FFEFBA;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	// background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+	// background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	@media only screen and (min-width: 768px) {
 		padding: 50px 20%;
 	}
@@ -406,29 +422,37 @@ export default {
 		generateResult: function() {
 			let state = ""
 			let heaven = ""
+			let perc = 0
 			if(this.currentReligion === "christian") {
 				if(this.mainPoint >= 10) {
 					state = "당신이 천국에 갈 확률은 100%입니다"
+					perc = 100
 				} else {
-					state="당신이 천국에 갈 확률은 0% 입니다 :("
+					state="당신이 천국에 갈 확률은 0% 입니다"
+					perc = 0
 				}
 				heaven = "기독교의 천국이란 신과 함께 영원히 함께 하는 것입니다. 성경에서는 심판의 날때 세상이 불타고 새로운 예루살렘에 선택받은 자들이 들어갈거라고 합니다. 그곳에는 병자나 죽음 전쟁이 없을 것이고 항상 기쁨이 가득할 것입니다. 과연 당신은 이 천국에 들어갈 수 있을까요?"
-				// this.theway = "In the Christian world, Jesus is the only way to heaven in the Christian world. No matter how you are good or bad, you must accept Jesus is your savior that died for your sin."
+				this.snsResult = `I will be going to Heaven ${perc}% in the Christian world`
 			}
 
 			if(this.currentReligion === "islam") {
 				if(this.jihad) {
 					state += "당신이 천국에 갈 확률은 100% 입니다. 지하드 성전은 무슬림으로서 위대한 행위입니다. 축하합니다."
+					perc = 100
 				}else {
 					if(this.mainPoint >= 5) {
 						state += "당신이 천국에 갈 확률은 50%입니다. 당신은 모든 의무를 지켜낸 훌륭한 무슬림입니다! 하지만 결과는 오직 알라신에게만 달려있습니다. 만약 당신이 알라를 대면할 때 그의 기분이 좋지 않다면 당신은 지옥에 갈 수도 있습니다."
+						perc = 50
 					} else {
 						if(this.rich) {
 							state += "당신이 천국에 갈 확률을 아주 낮습니다. 당신은 무슬림으로서 모든 의무를 행하지 않았습니다. 그러나 당신은 부자이므로 아직 기회가 남아있습니다. 지금부터라도 선행과 자선을 많이 베풀며 노력한다면 천국에 갈 수 있는 확률이 높아질 것입니다"
+							perc = 10
 						} else if(this.mainPoint > 1){
 							state += `당신이 천국에 갈 확률은 ${this.mainPoint * 10}% 입니다`
+							perc = this.mainPoint * 10
 						}else {								
 							state += "당신이 천국에 갈 확률은 0%입니다"
+							perc = 0
 						}
 					}
 					
@@ -436,34 +460,39 @@ export default {
 						// state += "<br />Unfortunately the quran tell you about the heaven only for men. However theres interpretation that there gonna be a heaven for woman. Do not lose hope and keep work hard."
 					}
 				}
-				heaven = "이슬람의 천국은 아름다운 낙원입니다. 그곳엔 술의 강이 흐르고 당신은 마셔도 마셔도 취하지 않을 것입니다. 또한 네명의 아름다운 처녀들이 당신을 기다리고 있을 것이며, 그중 하나는 당신의 현생에서 본 가장 아름다운 여인일 겁니다. 당신에겐 그 네명의 처녀들과 사랑을 나눌 무한한 힘이 주어집니다. 더이상 어려운 의무를 지키지않고 행복한 영생을 보내게 됩니다."
-				// this.theway = "No matter how you are a good muslim, we are not sure. Some doctors say that Jihad is the only way to the heaven 100 percent. Jihad meant struggling hard to become a good muslim. Hope you dont give up and work hard."
+				heaven = "이슬람의 천국은 아름다운 낙원입니다. 그곳엔 술의 강이 흐르고 마셔도 마셔도 취하지 않을 것입니다. 그곳엔 현세의 배우자가 당신과 영원히 함께 할 것입니다. 만약 당신이 특별한 신앙을 가진 자라면, 72명의 아름다운 처녀들이 당신을 기다리고 있을 것이며, 그중 하나는 당신의 현생에서 본 가장 아름다운 여인일 겁니다. 당신에겐 그 처녀들 전부와 사랑을 나눌 무한한 힘이 주어집니다. 더 이상 어려운 의무를 지키지않고 행복한 영생을 보내게 됩니다."
+				this.snsResult = `I will be going to Heaven ${perc}% in the Islam world`
 			}
 
 			if(this.currentReligion === "hindi") {
 				if(this.mainPoint >= 5) {
 					if(this.gender === "male") {
 						state += "축하합니다. 당신은 구원에 이르기위한 높은 단계에 다가가 있습니다. 어쩌면 이번 생이 윤회의 마지막 생일지도 모릅니다."
+						perc = 90
 					} else {
 						state += "당신은 아주 훌륭한 힌두교인입니다. 그러나 안타깝게도 당신은 여성입니다. 윤회의 고통에서 벗어나려면 먼저 남성으로 환생해야만 합니다. 희망을 잃지말고 수련에 정진하세요."
+						perc = 0
 					}
 				} else {
 					state += "안타깝게도 당신에게 쌓인 업보가 많습니다. 더 많은 수행이 필요합니다."
+					perc = 30
 				}
 
 				heaven = "힌두교에서 천국이란 윤회의 반복속에서 잠시 머무를 뿐인 장소입니다. 진정한 구원은 반복되는 윤회에서 벗어나는 것입니다. 이를위해 업보를 갚기위한 노력이 필요합니다."
-				// this.theway = "To set free from the reincarnation, you must work hard to have a good karma. If you are woman, you must born as a man first. It will be helpful if you are Brahmin. You must keep serve and love your god."
+				this.snsResult = `I will be going to get true salvation ${perc}% in the Hinduism world`
 			}
 
 			if(this.currentReligion === "budah") {
 				if(this.mainPoint >= 5) {
 					state += "훌륭합니다. 당신은 해탈에 가까운 경지에 이르렀습니다. 어쩌면 이번 생이 윤회의 마지막 생일지도 모릅니다. 더 수련에 정진하십시오."
+					perc = 90
 				} else {
 					state += "안타깝게도 아직 더 많은 수행이 필요합니다."
+					perc = 0
 				}
 
 				heaven = "불교의 세계관에서 천국 깨달음을 얻어 더 이상 윤회하지 않아도 되는 곳입니다. 해탈에 이르는 깨달음을 업기까지 업보를 갚고 수련에 정진해야 합니다"
-				// this.theway = "To set free from the reincarnation, you must work hard to have a good karma. If you are woman, you must born as a man first. It will be helpful if you are Brahmin. You must keep serve and love your god."
+				this.snsResult = `I will be going to get true salvation ${perc}% in the Buddhism world`
 			}
 
 
@@ -481,7 +510,7 @@ export default {
 			this.displayHeavenHow = true
 		},
 		onRestart: function() {
-			this.$router.push('/religion')		
+			this.$router.push('/religion/ko')		
 		},
 		onLanguage: function(event) {
 			if(event.target.value === "eng") {
@@ -489,8 +518,7 @@ export default {
 			} else if(event.target.value === "kor") {
 				this.$router.push('/religion/ko')					
 			} else if(event.target.value === "jap") {
-				console.log('jap')
-			// this.$router.push('/religion/jp')					
+				this.$router.push('/religion/jp')					
 			}
 		},
 
