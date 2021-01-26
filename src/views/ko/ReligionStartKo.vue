@@ -432,7 +432,7 @@ export default {
 					perc = 0
 				}
 				heaven = "기독교의 천국이란 신과 함께 영원히 함께 하는 것입니다. 성경에서는 심판의 날때 세상이 불타고 새로운 예루살렘에 선택받은 자들이 들어갈거라고 합니다. 그곳에는 병자나 죽음 전쟁이 없을 것이고 항상 기쁨이 가득할 것입니다. 과연 당신은 이 천국에 들어갈 수 있을까요?"
-				this.snsResult = `I will be going to Heaven ${perc}% in the Christian world`
+				this.snsResult = `기독교 세계관에서 내가 천국에 갈 확률은 ${perc}%`
 			}
 
 			if(this.currentReligion === "islam") {
@@ -461,7 +461,7 @@ export default {
 					}
 				}
 				heaven = "이슬람의 천국은 아름다운 낙원입니다. 그곳엔 술의 강이 흐르고 마셔도 마셔도 취하지 않을 것입니다. 그곳엔 현세의 배우자가 당신과 영원히 함께 할 것입니다. 만약 당신이 특별한 신앙을 가진 자라면, 72명의 아름다운 처녀들이 당신을 기다리고 있을 것이며, 그중 하나는 당신의 현생에서 본 가장 아름다운 여인일 겁니다. 당신에겐 그 처녀들 전부와 사랑을 나눌 무한한 힘이 주어집니다. 더 이상 어려운 의무를 지키지않고 행복한 영생을 보내게 됩니다."
-				this.snsResult = `I will be going to Heaven ${perc}% in the Islam world`
+				this.snsResult = `이슬람 세계관에서 내가 천국에 갈 확률은 ${perc}%`
 			}
 
 			if(this.currentReligion === "hindi") {
@@ -479,7 +479,7 @@ export default {
 				}
 
 				heaven = "힌두교에서 천국이란 윤회의 반복속에서 잠시 머무를 뿐인 장소입니다. 진정한 구원은 반복되는 윤회에서 벗어나는 것입니다. 이를위해 업보를 갚기위한 노력이 필요합니다."
-				this.snsResult = `I will be going to get true salvation ${perc}% in the Hinduism world`
+				this.snsResult = `힌두교 세계관에서 내가 해탈할 확률은 ${perc}%`
 			}
 
 			if(this.currentReligion === "budah") {
@@ -492,7 +492,7 @@ export default {
 				}
 
 				heaven = "불교의 세계관에서 천국 깨달음을 얻어 더 이상 윤회하지 않아도 되는 곳입니다. 해탈에 이르는 깨달음을 업기까지 업보를 갚고 수련에 정진해야 합니다"
-				this.snsResult = `I will be going to get true salvation ${perc}% in the Buddhism world`
+				this.snsResult = `불교 세계관에서 내가 해탈할 가능성은 ${perc}%`
 			}
 
 

@@ -21,7 +21,7 @@
 
 				<div class="conver-wrap">
 					<div v-if="initial">
-						<p>알아보고 싶은 종교 세계관을 선택해주세요</p>
+						<p>調べたい宗教世界観を選択してください</p>
 					</div>
 
 					<div v-if="displayQuestion">
@@ -32,19 +32,19 @@
 					</div>
 
 					<div v-if="displayHeaven">
-						<div class="title">설문이 모두 끝났습니다!</div>
+						<div class="title">設問が全て終わりました!</div>
 						{{heavenResult}}
-						<div class="title2">아래 버튼을 눌러 결과를 확인하세요</div>
+						<div class="title2">下のボタンを押して結果を確認してください</div>
 					</div>
 
 					<div v-if="displayResult && !displayHeavenHow">
-						<div class="title">당신은 천국에 갈 수 있을까요?</div>
+						<div class="title">あなたは天国に行けるでしょうか?</div>
 						{{finalResult}}
-						<div class="title2">아래 버튼을 눌러 더 알아봅시다</div>
+						<div class="title2">下のボタンを押してもっと見てみましょう</div>
 					</div>
 
 					<div v-if="displayHeavenHow">
-						<div class="title">구원이란 어떻게 가능할까?</div>
+						<div class="title">救援とはどうすれば可能だろうか?</div>
 						{{heavenHow}}
 					</div>
 
@@ -59,28 +59,28 @@
 			</div>
 
 			<div v-if="initial">
-				<div class="selectWrap" @click="onSelect(1)">불교</div>
-				<div class="selectWrap" @click="onSelect(2)">기독교</div>
-				<div class="selectWrap" @click="onSelect(3)">힌두교</div>
-				<div class="selectWrap" @click="onSelect(4)">이슬람교</div>
+				<div class="selectWrap" @click="onSelect(1)">仏教</div>
+				<div class="selectWrap" @click="onSelect(2)">基教</div>
+				<div class="selectWrap" @click="onSelect(3)">ヒンドゥー教</div>
+				<div class="selectWrap" @click="onSelect(4)">イスラム教</div>
 			</div>
 
 			<div v-if="displayQuestion">
 				<div v-if="questionLoading">Loading</div>		
 				<div v-else>
 					<div v-for="(choice, i) in currentQuestion.answer" v-bind:key="i">
-						<div class="selectWrap" @click="selectAnswer(choice.type, choice.point)">{{choice.ans}} : {{choice.point}}</div>
+						<div class="selectWrap" @click="selectAnswer(choice.type, choice.point)">{{choice.ans}}</div>
 					</div>
 				</div>
 			</div>
 
 			<div v-if="displayHeaven">
-				<div class="selectWrap" @click="onFinalResult">결과보기</div>
+				<div class="selectWrap" @click="onFinalResult">結果を見る</div>
 			</div>
 
 			<div v-if="displayResult">
-				<div class="selectWrap" v-if="!displayHeavenHow" @click="OnHowHeaven">이 종교세계에서 구원받으려면?</div>
-				<div class="selectWrap" @click="onRestart">다른 종교 알아보기</div>
+				<div class="selectWrap" v-if="!displayHeavenHow" @click="OnHowHeaven">この宗教世界から救われるには?</div>
+				<div class="selectWrap" @click="onRestart">他宗教を調べる</div>
 				<div class="sns">
 					<ShareNetwork
 						network="facebook"
@@ -88,18 +88,18 @@
 						:title="snsResult"
 						description="Find out if you will go to heaven or hell: "
 						quote="Heaven or Hell"
-						hashtags="천국,지옥,기독교,이슬람,불교,힌두교"
+						hashtags="天国,地獄,キリスト教,イスラム,仏教,ヒンドゥー教"
 					>
-						페이스북에 공유
+						Share on Facebook
 					</ShareNetwork>
 					<ShareNetwork
 						network="twitter"
 						url="https://haniplay/religion/jp"
-						:title="`Heaven or Hell? ${snsResult}. 내가 죽어서 어디에 가게될지 종교별로 알아보기`"
+						:title="`Heaven or Hell? ${snsResult}. 私が死んでどこに行くか宗教別に分かるよ`"
 						quote="Heaven or Hell"
-						hashtags="천국,지옥,기독교,이슬람,불교,힌두교"
+						hashtags="天国,地獄,キリスト教,イスラム,仏教,ヒンドゥー教"
 					>
-						트위터에 공유
+						Share on Twitter
 					</ShareNetwork>					
 				</div>
 			</div>				
@@ -343,7 +343,7 @@ export default {
 			this.generateCurrentQuestion()
 			this.displayQuestion = true
 
-			this.heavenHow = "기독교 세계관에서는 예수만이 유일한 구원자입니다. 예수가 죽음으로 당신의 죄값을 치뤘기 때문에, 당신은 지옥에 가지 않게 되었고, 이 사실을 믿고 예수를 영접하며 새 삶을 시작하면 당신은 천국에 갈 수 있습니다."
+			this.heavenHow = "キリスト教の世界観ではイエスだけが唯一の救援者です。 イエスが死によりあなたの罪の償いをしたので、あなたは地獄に行かなくなり、この事実を信じてイエスを迎えて新しい人生を始めれば、あなたは天国に行くことができます"
 		},
 		generateHindiQuestions: function() {
 			this.currentReligion = "hindi"
@@ -358,7 +358,7 @@ export default {
 			this.generateCurrentQuestion()
 			this.displayQuestion = true
 
-			this.heavenHow = "힌두교의 세계관에서 천국과 지옥은 윤회의 반복 속에 잠시 머무르는 장소일 뿐입니다. 진정한 구원은 고통의 윤회에서 업보를 치루고 자유해지는 것입니다. 이를 위해서는 업보를 갚고 당신의 신을 사랑해야 합니다. 만약 당신이 여자라면 먼저 남성으로 다시 태어나야합니다."
+			this.heavenHow = "ヒンズー教の世界観において、天国と地獄は輪廻の繰り返しの中、しばし留まる場所でしかありません。 真の救援は、苦痛の輪廻から報い、自由になることです。 このためには因果応報をし、あなたの神を愛さなければなりません。 もしあなたが女なら先に男性に生まれ変わらなければなりません"
 		},		
 		generateIslamQuestions: function() {
 			this.currentReligion = "islam"
@@ -373,7 +373,7 @@ export default {
 			this.generateCurrentQuestion()
 			this.displayQuestion = true
 
-			this.heavenHow = "이슬람은 복종의 종교입니다. 알라신께서 당신에게 내린 명령을 수행해야 합니다. 특히 5가지 의무가 있습니다. 이슬람으로서의 신앙고백, 하루 다섯번의 기도, 가난한 자들을 위한 자선, 매년 라마단 금식, 메카의 성지순례를 행해야만 합니다. 이 다섯가지 의무를 지킬때 당신은 낙원으로 갈 확률이 높아지게 됩니다."
+			this.heavenHow = "イスラムは服従の宗教です。 アラー神があなたに下した命令を遂行しなければなりません。 特に5つの義務があります。 イスラムとしての信仰告白、一日5回の祈祷、貧しい人たちのための慈善、毎年ラマダン断食、メッカの聖地巡礼を行わなければなりません。 この5つの義務を守れば、あなたは楽園へ行く確率が高くなります"
 		},
 		generateBudahQuestions: function() {
 			this.currentReligion = "budah"
@@ -388,7 +388,7 @@ export default {
 			this.generateCurrentQuestion()
 			this.displayQuestion = true
 
-			this.heavenHow = "불교세계에서는 해탈의 깨달음에 이르려면 깊은 수행이 필요합니다. 번뇌와 집착 욕망으로부터 벗어날 수있도록 수련에 정진하고 명상하십시오."
+			this.heavenHow = "仏教世界では解脱の悟りを開くためには深い修行が必要です。 煩悩や執着への欲望から解放できるよう、修練に精進し、瞑想してください。"
 		},		
 		generateCurrentQuestion: function() {
 			this.questionLoading = true
@@ -424,33 +424,33 @@ export default {
 			let perc = 0
 			if(this.currentReligion === "christian") {
 				if(this.mainPoint >= 10) {
-					state = "당신이 천국에 갈 확률은 100%입니다"
+					state = "あなたが天国に行く確率は100%です。"
 					perc = 100
 				} else {
-					state="당신이 천국에 갈 확률은 0% 입니다"
+					state="あなたが天国に行く確率は0%です"
 					perc = 0
 				}
-				heaven = "기독교의 천국이란 신과 함께 영원히 함께 하는 것입니다. 성경에서는 심판의 날때 세상이 불타고 새로운 예루살렘에 선택받은 자들이 들어갈거라고 합니다. 그곳에는 병자나 죽음 전쟁이 없을 것이고 항상 기쁨이 가득할 것입니다. 과연 당신은 이 천국에 들어갈 수 있을까요?"
-				this.snsResult = `I will be going to Heaven ${perc}% in the Christian world`
+				heaven = "キリスト教天国とは、神と共に永遠に共にすることです。 聖書では、「審判の日」に世の中が燃え、新しいエルサレムに選ばれた者たちが入るそうです。 そこは、病人も死も戦争もないだろうし、いつも喜びでいっぱいでしょう」。 果してあなたはこの天国に入れるでしょうか。?"
+				this.snsResult = `キリスト教世界観で私が天国に行く確率は ${perc}%`
 			}
 
 			if(this.currentReligion === "islam") {
 				if(this.jihad) {
-					state += "당신이 천국에 갈 확률은 100% 입니다. 지하드 성전은 무슬림으로서 위대한 행위입니다. 축하합니다."
+					state += "あなたが天国に行く確率は100%です。 ジハード聖戦はムスリムとして偉大な行為です。 おめでとうございます。"
 					perc = 100
 				}else {
 					if(this.mainPoint >= 5) {
-						state += "당신이 천국에 갈 확률은 50%입니다. 당신은 모든 의무를 지켜낸 훌륭한 무슬림입니다! 하지만 결과는 오직 알라신에게만 달려있습니다. 만약 당신이 알라를 대면할 때 그의 기분이 좋지 않다면 당신은 지옥에 갈 수도 있습니다."
+						state += "あなたが天国に行く確率は50%です。 あなたは全ての義務を守り抜いた立派なムスリムです! しかし、結果はただアラーシーンだけにかかっています。 もしあなたがアラーに対面する時、彼の機嫌がよくないなら、あなたは地獄に陥ることもあります。"
 						perc = 50
 					} else {
 						if(this.rich) {
-							state += "당신이 천국에 갈 확률을 아주 낮습니다. 당신은 무슬림으로서 모든 의무를 행하지 않았습니다. 그러나 당신은 부자이므로 아직 기회가 남아있습니다. 지금부터라도 선행과 자선을 많이 베풀며 노력한다면 천국에 갈 수 있는 확률이 높아질 것입니다"
+							state += "あなたが天国に行く確率がとても低いです。 貴方はムスリムとして全ての義務を果たしました。 しかしあなたはお金持ちなのでまだきかいがのこっています。 今からでも善行と慈善をたくさん施しながら努力すれば天国に行くことができる確率が高くなるはずです."
 							perc = 10
 						} else if(this.mainPoint > 1){
-							state += `당신이 천국에 갈 확률은 ${this.mainPoint * 10}% 입니다`
+							state += `あなたが天国に行く確率は ${this.mainPoint * 10}% です`
 							perc = this.mainPoint * 10
 						}else {								
-							state += "당신이 천국에 갈 확률은 0%입니다"
+							state += "あなたが天国に行く確率は0%です。"
 							perc = 0
 						}
 					}
@@ -459,39 +459,39 @@ export default {
 						// state += "<br />Unfortunately the quran tell you about the heaven only for men. However theres interpretation that there gonna be a heaven for woman. Do not lose hope and keep work hard."
 					}
 				}
-				heaven = "이슬람의 천국은 아름다운 낙원입니다. 그곳엔 술의 강이 흐르고 당신은 마셔도 마셔도 취하지 않을 것입니다. 또한 네명의 아름다운 처녀들이 당신을 기다리고 있을 것이며, 그중 하나는 당신의 현생에서 본 가장 아름다운 여인일 겁니다. 당신에겐 그 네명의 처녀들과 사랑을 나눌 무한한 힘이 주어집니다. 더이상 어려운 의무를 지키지않고 행복한 영생을 보내게 됩니다."
-				this.snsResult = `I will be going to Heaven ${perc}% in the Islam world`
+				heaven = "「イスラムの天国は、美しい楽園です。 そこには酒の川が流れてあなたは飲んでも酔わないでしょう. また、四人の美しい娘たちがあなたを待っているはずで、その中の一つはあなたの現世で見た一番美しい女性でしょう。 あなたにはその4人の娘たちと愛を交わす無限の力が与えられます。 これ以上難しい義務を守らず、幸せな永生を送るようになります"
+				this.snsResult = `イスラム世界観で私が天国に行く確率は ${perc}%`
 			}
 
 			if(this.currentReligion === "hindi") {
 				if(this.mainPoint >= 5) {
 					if(this.gender === "male") {
-						state += "축하합니다. 당신은 구원에 이르기위한 높은 단계에 다가가 있습니다. 어쩌면 이번 생이 윤회의 마지막 생일지도 모릅니다."
+						state += "おめでとうございます。あなたは救援に至るための高い段階に近づいています。 もしかしたら今生が輪廻の最後の誕生日かもしれません."
 						perc = 90
 					} else {
-						state += "당신은 아주 훌륭한 힌두교인입니다. 그러나 안타깝게도 당신은 여성입니다. 윤회의 고통에서 벗어나려면 먼저 남성으로 환생해야만 합니다. 희망을 잃지말고 수련에 정진하세요."
+						state += "貴方はとても立派なヒンズー教徒です。 しかし残念なことにあなたは女性です。 輪廻の苦しみから逃れるためには、まず男性に生まれ変わらなければなりません。 希望を失わずに修練に精進してください."
 						perc = 0
 					}
 				} else {
-					state += "안타깝게도 당신에게 쌓인 업보가 많습니다. 더 많은 수행이 필요합니다."
+					state += "残念ながら、あなたにたまった因果が多いです。 より多くの修行が必要です。"
 					perc = 30
 				}
 
-				heaven = "힌두교에서 천국이란 윤회의 반복속에서 잠시 머무를 뿐인 장소입니다. 진정한 구원은 반복되는 윤회에서 벗어나는 것입니다. 이를위해 업보를 갚기위한 노력이 필요합니다."
-				this.snsResult = `I will be going to get true salvation ${perc}% in the Hinduism world`
+				heaven = "ヒンズー教で天国とは輪廻の繰り返しの中でしばらく留まるだけの場所です。 真の救いは繰り返される輪廻から抜け出すことです。 因果応報のための努力が必要です."
+				this.snsResult = `ヒンズー教の世界観から私が解脱する確率は ${perc}%`
 			}
 
 			if(this.currentReligion === "budah") {
 				if(this.mainPoint >= 5) {
-					state += "훌륭합니다. 당신은 해탈에 가까운 경지에 이르렀습니다. 어쩌면 이번 생이 윤회의 마지막 생일지도 모릅니다. 더 수련에 정진하십시오."
+					state += "立派です。あなたは解脱に近い境地に達しました。 もしかしたら今生が輪廻の最後の誕生日かもしれません。 もっと修練に精進してください。"
 					perc = 90
 				} else {
-					state += "안타깝게도 아직 더 많은 수행이 필요합니다."
+					state += "残念ながら、まだもっと多くの修行が必要です。"
 					perc = 0
 				}
 
-				heaven = "불교의 세계관에서 천국 깨달음을 얻어 더 이상 윤회하지 않아도 되는 곳입니다. 해탈에 이르는 깨달음을 업기까지 업보를 갚고 수련에 정진해야 합니다"
-				this.snsResult = `I will be going to get true salvation ${perc}% in the Buddhism world`
+				heaven = "仏教の世界観から天国への悟りを開き、輪廻しなくてもすむ場所です。 解脱の悟りを背負うまで、報い修行に励まなければなりません"
+				this.snsResult = `仏教の世界観から私が解脱する可能性は ${perc}%`
 			}
 
 

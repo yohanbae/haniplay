@@ -6,9 +6,9 @@
 			<div class="main-wrap">
 				<img src="../../assets/baby_defaults.png" alt="hh" />
 				<div class="conver-wrap">
-                    만약 오늘 밤에 죽게된다면<br />
-                    내 영혼은 어디로 갈까요?<br />
-                    각 종교에서 어떻게 설명하는지 알아봅시다
+                    もし今夜死ぬことになったら<br />
+                    私の魂はどこへ行くんでしょうか?<br />
+                    各宗教でどう説明するのか調べてみましょう
 				</div>
 				<div class="symbol-wrap">
 				<v-icon class="mr-3">mdi-christianity-outline </v-icon>
@@ -20,7 +20,7 @@
 			<img class="heaven" src="../../assets/heaven.png" alt="heaven" />
 			<img class="hell" src="../../assets/hell.png" alt="hell" />
 			<div class="titles">HEAVEN OR HELL</div>
-			<button class="thebutton mt-5" @click="onStart">시작하기</button>
+			<button class="thebutton mt-5" @click="onStart">START</button>
 		</div>
     <div class="footer">
       Hanison - All rights reserved

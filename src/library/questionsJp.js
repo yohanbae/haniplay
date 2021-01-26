@@ -176,35 +176,35 @@ export const questionHindiCommon = [
 ]
 
 export const questionHindiPoint = [
-	{ question: "공부하는 걸 좋아하나요?", answer: [
+	{ question: "勉強するのが好きですか?", answer: [
 		{ ans: "はい", type:"common", point:1 },
 		{ ans: "いいえ", type:"common", point:1 },	
 	] },
-	{ question: "환생을 믿습니까?", answer: [
+	{ question: "転生を信じますか?", answer: [
 		{ ans: "はい", type:"common", point:1 },
 		{ ans: "いいえ", type:"common", point:1 },		
 	] },	
-	{ question: "남자세요 여자세요?", answer: [
-		{ ans: "Man", type:"gender", point:1 },
-		{ ans: "Woman", type:"gender", point:2 },
+	{ question: "男ですか？女ですか？?", answer: [
+		{ ans: "男", type:"gender", point:1 },
+		{ ans: "女", type:"gender", point:2 },
 	] },
-	{ question: "지난 생의 업보를 갚기위해 노력합니까?", answer: [
+	{ question: "前世の因果を返すために努力しますか?", answer: [
 		{ ans: "はい", type:"main", point:1 },
 		{ ans: "いいえ", type:"main", point:0 },		
 	] },		
-	{ question: "당신이 섬기는 신들을 진심으로 사랑합니까?", answer: [
+	{ question: "あなたが仕える神々を心から愛していますか", answer: [
 		{ ans: "はい", type:"main", point:1 },
 		{ ans: "いいえ", type:"main", point:0 },
 	] },
-	{ question: "부자인가요?", answer: [
+	{ question: "あなたはお金持ちですか?", answer: [
 		{ ans: "はい", type:"main", point:1 },
 		{ ans: "いいえ", type:"main", point:0 },		
 	] },	
-	{ question: "당신은 브라만(인도 최상위 계급) 계급입니까?", answer: [
+	{ question: "あなたはバラモン（インド最上位階級）階級ですか?", answer: [
 		{ ans: "はい", type:"main", point:1 },
 		{ ans: "いいえ", type:"main", point:0 },
 	] },
-	{ question: "소고기를 좋아하나요?", answer: [
+	{ question: "牛肉が好きですか?", answer: [
 		{ ans: "はい", type:"main", point:0 },
 		{ ans: "いいえ", type:"main", point:1 },		
 	] },			
@@ -213,63 +213,63 @@ export const questionHindiPoint = [
 
 
 export const questionBudahCommon = [
-	{ question: "당신은 스무살 이상인가요?", answer: [
-		{ ans: "네", type:"common", point:1 },
-		{ ans: "아니오", type:"common", point:1 },
+	{ question: "あなたは二十歳以上ですか?", answer: [
+		{ ans: "はい", type:"common", point:1 },
+		{ ans: "いいえ", type:"common", point:1 },	
 	] },
-	{ question: "현재의 삶에 만족하나요?", answer: [
-		{ ans: "네", type:"common", point:1 },
-		{ ans: "아니오", type:"common", point:1 },
+	{ question: "現在の暮らしに満足していますか?", answer: [
+		{ ans: "はい", type:"common", point:1 },
+		{ ans: "いいえ", type:"common", point:1 },	
 	] },
-	{ question: "거룩한 삶을 살고 있습니까?", answer: [
-		{ ans: "네", type:"common", point:1 },
-		{ ans: "아니오", type:"common", point:1 },		
+	{ question: "聖なる人生を生きていますか?", answer: [
+		{ ans: "はい", type:"common", point:1 },
+		{ ans: "いいえ", type:"common", point:1 },		
 	] },
-	{ question: "당신은 인도사람인가요?", answer: [
-		{ ans: "네", type:"common", point:1 },
-		{ ans: "아니오", type:"common", point:2 }
+	{ question: "あなたはインド人ですか?", answer: [
+		{ ans: "はい", type:"common", point:1 },
+		{ ans: "いいえ", type:"common", point:1 },	
 	] },
-	{ question: "학교 성적은 어떤 편인가요?", answer: [
-		{ ans: "높은 편", type:"common", point: 1 },
-		{ ans: "낮은 편", type:"common", point: 0 },
+	{ question: "学校の出来はどうですか?", answer: [
+		{ ans: "いい方", type:"common", point: 1 },
+		{ ans: "悪いほう", type:"common", point: 0 },
 	] },
-	{ question: "성적 욕망을 잘 절제하는 편인가요?", answer: [
-		{ ans: "네", type:"common", point: 1 },
-		{ ans: "아니오", type:"common", point: 0 },
+	{ question: "性的欲望をよく節制する方でしょうか?", answer: [
+		{ ans: "はい", type:"common", point:1 },
+		{ ans: "いいえ", type:"common", point:1 },	
 	] },
-	{ question: "당신은 좋은 사람입니까?", answer: [
-		{ ans: "네", type:"common", point: 1 },
-		{ ans: "아니오", type:"common", point: 0 },		
+	{ question: "あなたはいい人ですか?", answer: [
+		{ ans: "はい", type:"common", point:1 },
+		{ ans: "いいえ", type:"common", point:1 },		
 	] },	
-	{ question: "당신은 부지런한 편인가요?", answer: [
-		{ ans: "네", type:"common", point: 1 },
-		{ ans: "아니오", type:"common", point: 0 },		
+	{ question: "あなたは働き者の方ですか?", answer: [
+		{ ans: "はい", type:"common", point:1 },
+		{ ans: "いいえ", type:"common", point:1 },		
     ] },		
-	{ question: "당신은 대머리인가요?", answer: [
-		{ ans: "네", type:"common", point: 1 },
-		{ ans: "아니오", type:"common", point: 0 },		
+	{ question: "あなたは禿げてますか?", answer: [
+		{ ans: "はい", type:"common", point:1 },
+		{ ans: "いいえ", type:"common", point:1 },		
     ] },	    
-	{ question: "가족중에 불교신자가 있나요?", answer: [
-		{ ans: "네", type:"common", point: 1 },
-		{ ans: "아니오", type:"common", point: 0 },		
+	{ question: "家族の中に仏教信者がいますか?", answer: [
+		{ ans: "はい", type:"common", point:1 },
+		{ ans: "いいえ", type:"common", point:1 },	
 	] },	        
 ]
 
 export const questionBudahPoint = [
-	{ question: "불경을 자주 외웁니까?", answer: [
-		{ ans: "네", type:"common", point:1 },
-		{ ans: "아니오", type:"common", point:1 },
+	{ question: "お経をよく覚えますか?", answer: [
+		{ ans: "はい", type:"common", point:1 },
+		{ ans: "いいえ", type:"common", point:1 },	
 	] },
-	{ question: "윤회를 믿습니까?", answer: [
-		{ ans: "네", type:"common", point:1 },
-		{ ans: "아니오", type:"common", point:1 },		
+	{ question: "輪廻を信じますか?", answer: [
+		{ ans: "はい", type:"common", point:1 },
+		{ ans: "いいえ", type:"common", point:1 },		
 	] },	
-	{ question: "지난 생의 업보를 갚기위해 노력하나요?", answer: [
-		{ ans: "네", type:"main", point:1 },
-		{ ans: "아니오", type:"main", point:0 },		
+	{ question: "過去の業を報いるために努力していますか?", answer: [
+		{ ans: "はい", type:"main", point:1 },
+		{ ans: "いいえ", type:"main", point:0 },		
 	] },		
-	{ question: "당신은 소고기를 좋아합니까?", answer: [
-		{ ans: "네", type:"main", point:0 },
-		{ ans: "아니오", type:"main", point:1 },		
+	{ question: "あなたは牛肉が好きですか?", answer: [
+		{ ans: "はい", type:"main", point:0 },
+		{ ans: "いいえ", type:"main", point:1 },		
 	] },			
 ]
