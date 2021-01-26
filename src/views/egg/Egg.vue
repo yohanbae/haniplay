@@ -18,11 +18,11 @@
 					<div class="theinside">
 						<div class="egg-style" @click="onSelectStyle(1)">
 							<div>SOFT BOILED</div>
-							<img src="../../assets/egg.png" alt="sm" />
+							<img src="../../assets/soft.png" alt="sm" />
 						</div>
 						<div class="egg-style" @click="onSelectStyle(2)">
 							<div>HARD BOILED</div>
-							<img src="../../assets/egg.png" alt="sm" />
+							<img src="../../assets/hard.png" alt="sm" />
 						</div>
 					</div>
 				</v-card>
@@ -32,11 +32,13 @@
 				<div class="describe">Add egg into the boiling water<br /> Then tab this START button</div>
 
 				<div class="egg-click" v-if="!playing" @click="onStart">
-					<img src="../../assets/egg.png" alt="haha" />
+					<img v-if="eggStyle ==='soft'" src="../../assets/soft.png" alt="haha" />
+					<img v-if="eggStyle ==='hard'" src="../../assets/hard.png" alt="haha" />
 					<div>START</div>
 				</div>
 				<div v-else @click="onStop">
-					<img src="../../assets/egg.png" alt="haha" />
+					<img v-if="eggStyle ==='soft'" src="../../assets/soft.png" alt="haha" />
+					<img v-if="eggStyle ==='hard'" src="../../assets/hard.png" alt="haha" />
 					<div>STOP</div>
 				</div>
 			</div>
@@ -94,8 +96,8 @@
 			font-size: 20px;
 		}
 		img {
-			width: 100px;
-			height:100px;
+			width: 150px;
+			height:150px;
 		}
 		.egg-click{
 			cursor: pointer;
@@ -128,7 +130,7 @@
 				background: gray;
 				color:white;
 			}
-			img { width: 30px; height:30px; }
+			img { width: 40px; height:40px; }
 
 		}
 	}

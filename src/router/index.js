@@ -10,7 +10,7 @@ const routes = [
     name: 'Home',
     component: Home
   },
-  { path: '/study', name: 'Study', component: () => import('../views/study/Study.vue'), meta: { title: 'Study App',
+  { path: '/study', name: 'Study', component: () => import('../views/study/Study.vue'), meta: { title: 'STUDY TUBE',
     metaTags: [
       {
         name: 'description',
@@ -49,7 +49,7 @@ const routes = [
     ]
     } 
   },
-  { path: '/religion/ko', name: 'ReligionKo', component: () => import('../views/ko/ReligionKo.vue'), meta: { title: 'HEAVEN or HELL',
+  { path: '/religion/ko', name: 'ReligionKo', component: () => import('../views/ko/ReligionKo.vue'), meta: { title: 'HEAVEN or HELL KO',
     metaTags: [
       {
         name: 'description',
@@ -62,7 +62,7 @@ const routes = [
     ]
     } 
   },
-  { path: '/religion/ko/start', name: 'ReligionStartKo', component: () => import('../views/ko/ReligionStartKo.vue'), meta: { title: 'HEAVEN or HELL',
+  { path: '/religion/ko/start', name: 'ReligionStartKo', component: () => import('../views/ko/ReligionStartKo.vue'), meta: { title: 'HEAVEN or HELL KO',
     metaTags: [
       {
         name: 'description',
@@ -75,7 +75,7 @@ const routes = [
     ]
     } 
   },
-  { path: '/religion/jp', name: 'ReligionJp', component: () => import('../views/jp/ReligionJp.vue'), meta: { title: 'HEAVEN or HELL',
+  { path: '/religion/jp', name: 'ReligionJp', component: () => import('../views/jp/ReligionJp.vue'), meta: { title: 'HEAVEN or HELL JP',
     metaTags: [
       {
         name: 'description',
@@ -88,7 +88,7 @@ const routes = [
     ]
     } 
   },
-  { path: '/religion/jp/start', name: 'ReligionStartJp', component: () => import('../views/jp/ReligionStartJp.vue'), meta: { title: 'HEAVEN or HELL',
+  { path: '/religion/jp/start', name: 'ReligionStartJp', component: () => import('../views/jp/ReligionStartJp.vue'), meta: { title: 'HEAVEN or HELL JP',
     metaTags: [
       {
         name: 'description',
@@ -101,7 +101,7 @@ const routes = [
     ]
     } 
   },
-  { path: '/egg', name: 'Egg', component: () => import('../views/egg/Egg.vue'), meta: { title: 'Egg Boiled Timer',
+  { path: '/egg', name: 'Egg', component: () => import('../views/egg/Egg.vue'), meta: { title: 'Egg Boil Timer',
     metaTags: [
       {
         name: 'description',
