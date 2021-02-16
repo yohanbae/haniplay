@@ -44,10 +44,10 @@
 			</div>
 
 			<div class="historybottom">
-				<v-sparkline class="graph-position" :fill="true" auto-draw :value="historyValues" stroke-linecap="round" smooth="5" color="rgba(0, 128, 128, 0.2)" line-width="1" padding="1"></v-sparkline>
-				<div class="labels">
+				<v-sparkline class="graph-position" :fill="true" auto-draw :labels="historyLabels" :value="historyValues" stroke-linecap="round" smooth="5" color="rgba(0, 128, 128, 0.2)" line-width="1" padding="5"></v-sparkline>
+				<!-- <div class="labels">
 					<div class="label-elem" v-for="item in historyLabels" v-bind:key="item">Jan.{{item}}</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 

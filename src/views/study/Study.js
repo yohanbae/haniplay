@@ -268,6 +268,7 @@ export default {
 			}
 			this.historyLabels.push(moment().format("DD"))
 			this.historyValues.push(this.time)
+			console.log(this.historyLabels)
 		}
 	},
 	mounted: function() {
