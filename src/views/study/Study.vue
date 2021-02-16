@@ -109,8 +109,8 @@
 			</v-dialog>	
 			<div class="tip">
 				<strong>Tips</strong><br />
-				Set the study time and keep it everyday with your favorite focus music channel<br /><br />
-				Make sure lower the youtube quality so you won't waste your data.<br /><br />
+				Set the study time and keep it every day with your favorite focus music channel<br /><br />
+				Make sure to lower the youtube quality so you won't waste your data.<br /><br />
 				You can save up to four youtube channels. All the credits will go to the channel owner.
 			</div>
 		</div>
