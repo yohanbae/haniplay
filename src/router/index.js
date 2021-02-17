@@ -8,17 +8,28 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
-  },
-  { path: '/study', name: 'Study', component: () => import('../views/study/Study.vue'), meta: { title: 'STUDY TUBE',
+    component: Home, meta: { title: 'IZROOMS',
     metaTags: [
       {
         name: 'description',
-        content: 'Study App without installing or account'
+        content: 'DEVELOPER ROOM'
       },
       {
         property: 'og:description',
-        content: 'Study App without installing or account'
+        content: 'DEVELOPER ROOM'
+      }
+    ]
+    }
+  },
+  { path: '/study', name: 'Study', component: () => import('../views/study/Study.vue'), meta: { title: 'STUDYTUBE',
+    metaTags: [
+      {
+        name: 'description',
+        content: 'Set and track your study time while listening to your favorite focus music youtube channel'
+      },
+      {
+        property: 'og:description',
+        content: 'Set and track your study time while listening to your favorite focus music youtube channel'
       }
     ]
     } 
@@ -27,11 +38,11 @@ const routes = [
     metaTags: [
       {
         name: 'description',
-        content: 'Will I go to heaven or hell?'
+        content: `What if you die tonight, will you go to HEAVEN or HELL? Let's find out how religions talk about this!`
       },
       {
         property: 'og:description',
-        content: 'Will I go to heaven or hell?'
+        content: `What if you die tonight, will you go to HEAVEN or HELL? Let's find out how religions talk about this!`
       }
     ]
     } 
@@ -40,11 +51,11 @@ const routes = [
     metaTags: [
       {
         name: 'description',
-        content: 'Will I go to heaven or hell?'
+        content: `What if you die tonight, will you go to HEAVEN or HELL? Let's find out how religions talk about this!`
       },
       {
         property: 'og:description',
-        content: 'Will I go to heaven or hell?'
+        content: `What if you die tonight, will you go to HEAVEN or HELL? Let's find out how religions talk about this!`
       }
     ]
     } 
@@ -53,11 +64,11 @@ const routes = [
     metaTags: [
       {
         name: 'description',
-        content: 'Will I go to heaven or hell?'
+        content: `오늘 밤 내가 죽는다면 나는 어디로 가게 될까? 간단한 설문으로 각 종교별 대답을 알아보자`
       },
       {
         property: 'og:description',
-        content: 'Will I go to heaven or hell?'
+        content: `오늘 밤 내가 죽는다면 나는 어디로 가게 될까? 간단한 설문으로 각 종교별 대답을 알아보자`
       }
     ]
     } 
@@ -66,11 +77,11 @@ const routes = [
     metaTags: [
       {
         name: 'description',
-        content: 'Will I go to heaven or hell?'
+        content: `오늘 밤 내가 죽는다면 나는 어디로 가게 될까? 간단한 설문으로 각 종교별 대답을 알아보자`
       },
       {
         property: 'og:description',
-        content: 'Will I go to heaven or hell?'
+        content: `오늘 밤 내가 죽는다면 나는 어디로 가게 될까? 간단한 설문으로 각 종교별 대답을 알아보자`
       }
     ]
     } 
@@ -79,11 +90,11 @@ const routes = [
     metaTags: [
       {
         name: 'description',
-        content: 'Will I go to heaven or hell?'
+        content: '今夜私が死んだら私はどこに行くことになるだろうか。 簡単な設問で各宗教の答えを調べてみよう'
       },
       {
         property: 'og:description',
-        content: 'Will I go to heaven or hell?'
+        content: '今夜私が死んだら私はどこに行くことになるだろうか。 簡単な設問で各宗教の答えを調べてみよう'
       }
     ]
     } 
@@ -92,11 +103,11 @@ const routes = [
     metaTags: [
       {
         name: 'description',
-        content: 'Will I go to heaven or hell?'
+        content: '今夜私が死んだら私はどこに行くことになるだろうか。 簡単な設問で各宗教の答えを調べてみよう'
       },
       {
         property: 'og:description',
-        content: 'Will I go to heaven or hell?'
+        content: '今夜私が死んだら私はどこに行くことになるだろうか。 簡単な設問で各宗教の答えを調べてみよう'
       }
     ]
     } 
