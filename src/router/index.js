@@ -21,7 +21,7 @@ const routes = [
     ]
     }
   },
-  { path: '/study', name: 'Study', component: () => import('../views/study/Study.vue'), meta: { title: 'STUDYTUBE',
+  { path: '/studytube', name: 'Study', component: () => import('../views/study/Study.vue'), meta: { title: 'STUDYTUBE',
     metaTags: [
       {
         name: 'description',
