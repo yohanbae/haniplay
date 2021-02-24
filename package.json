@@ -16,6 +16,7 @@
     "vue-keypress": "^2.1.1",
     "vue-router": "^3.2.0",
     "vue-social-sharing": "^3.0.4",
+    "vue-toastify": "^1.8.0",
     "vue-youtube-embed": "^2.2.2",
     "vuetify": "^2.2.11"
   },

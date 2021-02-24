@@ -33,7 +33,33 @@ const routes = [
       }
     ]
     } 
-  },  
+  },
+  { path: '/izgym', name: 'Izgym', component: () => import('../views/izgym/Izgym.vue'), meta: { title: 'IZ*GYM',
+    metaTags: [
+      {
+        name: 'description',
+        content: '아이즈원 운동법'
+      },
+      {
+        property: 'og:description',
+        content: '아이즈원 운동법'
+      }
+    ]
+    } 
+  },
+  { path: '/izgym/settings', name: 'Settings', component: () => import('../views/izgym/Settings.vue'), meta: { title: 'IZ*GYM',
+    metaTags: [
+      {
+        name: 'description',
+        content: '아이즈원 운동법'
+      },
+      {
+        property: 'og:description',
+        content: '아이즈원 운동법'
+      }
+    ]
+    } 
+  },    
   { path: '/religion', name: 'Religion', component: () => import('../views/Religion.vue'), meta: { title: 'HEAVEN or HELL',
     metaTags: [
       {
