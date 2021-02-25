@@ -250,7 +250,7 @@
         position: absolute;
         left:20px; bottom:20px;
         width:calc(100% - 60px);
-        height:60px;
+        min-height:60px;
         border:2px solid pink;
         padding:10px;
         font-size: 20px;

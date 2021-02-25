@@ -82,63 +82,63 @@ export default {
                 day: "Sunday",
                 daycode: 0,
                 data: [
-                    {id: generateId(), name:'pullup', current:0, total: 50},
-                    {id: generateId(), name:'pushup', current:0, total: 30},
-                    {id: generateId(), name:'abs', current:0, total: 20}                    
+                    {id: generateId(), name:'Fiesta Pull Up', current:0, total: 50},
+                    {id: generateId(), name:'IZ Push Up', current:0, total: 30},
+                    {id: generateId(), name:'Violeta Squat', current:0, total: 20}                    
                 ]
             },
             {
                 day: "Monday",
                 daycode: 1,
                 data: [
-                    {id: generateId(), name:'Leg', current:0, total: 50},
-                    {id: generateId(), name:'Shoulder', current:0, total: 30},
-                    {id: generateId(), name:'Header', current:0, total: 20}                    
+                    {id: generateId(), name:'Hitomi Pilates', current:0, total: 50},
+                    {id: generateId(), name:'Eunbi Push Up', current:0, total: 30},
+                    {id: generateId(), name:'Enozi Squat', current:0, total: 20}                    
                 ]
             },
             {
                 day: "Tuesday",
                 daycode: 2,
                 data: [
-                    {id: generateId(), name:'Hurry', current:0, total: 50},
-                    {id: generateId(), name:'Eyes', current:0, total: 30},
-                    {id: generateId(), name:'Brain', current:0, total: 20}                    
+                    {id: generateId(), name:'Dangdang Running', current:0, total: 50},
+                    {id: generateId(), name:'Panorama Abs', current:0, total: 30},
+                    {id: generateId(), name:'Minguri Jump Rope', current:0, total: 20}                    
                 ]
             },
             {
                 day: "Wednesday",
                 daycode: 3,
                 data: [
-                    {id: generateId(), name:'Dari', current:0, total: 50},
-                    {id: generateId(), name:'Noon', current:0, total: 30},
-                    {id: generateId(), name:'Pal', current:0, total: 20}                    
+                    {id: generateId(), name:'Buenos Pull Up', current:0, total: 50},
+                    {id: generateId(), name:'Sakura Running', current:0, total: 30},
+                    {id: generateId(), name:'Joguri Jump Rope', current:0, total: 20}                    
                 ]
             },
             {
                 day: "Thursday",
                 daycode: 4,
                 data: [
-                    {id: generateId(), name:'Mori', current:0, total: 50},
-                    {id: generateId(), name:'Ukkay', current:0, total: 30},
-                    {id: generateId(), name:'Murub', current:0, total: 20}                    
+                    {id: generateId(), name:'Ori Squat', current:0, total: 50},
+                    {id: generateId(), name:'Kangzzang Running', current:0, total: 30},
+                    {id: generateId(), name:'Yujin Jump Rope', current:0, total: 20}                    
                 ]
             },
             {
                 day: "Friday",
                 daycode: 5,
                 data: [
-                    {id: generateId(), name:'Orange', current:0, total: 50},
-                    {id: generateId(), name:'Yellow', current:0, total: 30},
-                    {id: generateId(), name:'Blue', current:0, total: 20}                    
+                    {id: generateId(), name:'Chaeyeon Dance', current:0, total: 50},
+                    {id: generateId(), name:'Beware Squat', current:0, total: 30},
+                    {id: generateId(), name:'Vampire Push Up', current:0, total: 20}                    
                 ]
             },           
             {
                 day: "Saturday",
                 daycode: 6,
                 data: [
-                    {id: generateId(), name:'Hitomi', current:0, total: 50},
-                    {id: generateId(), name:'Wonyoung', current:0, total: 30},
-                    {id: generateId(), name:'Minju', current:0, total: 20}                    
+                    {id: generateId(), name:'Minju Core', current:0, total: 50},
+                    {id: generateId(), name:'Nako Jump Rope', current:0, total: 30},
+                    {id: generateId(), name:'Wonyoung Ball', current:0, total: 20}                    
                 ]
             },           
         ]
