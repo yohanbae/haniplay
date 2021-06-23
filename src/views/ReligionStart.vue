@@ -13,11 +13,11 @@
 		</div>
 		<div class="main">
 			<div class="main-wrap">
-				<img v-if="currentReligion===''" src="../assets/baby_defaults.png" alt="hh" />
-				<img v-if="currentReligion==='budah'" src="../assets/baby_budahs.png" alt="hh" />
-				<img v-if="currentReligion==='christian'" src="../assets/baby_christians.png" alt="hh" />
-				<img v-if="currentReligion==='hindi'" src="../assets/baby_hindus.png" alt="hh" />
-				<img v-if="currentReligion==='islam'" src="../assets/baby_islams.png" alt="hh" />
+				<img v-if="currentReligion===''" src="~@/assets/baby_defaults.png" alt="hh" />
+				<img v-if="currentReligion==='budah'" src="~@/assets/baby_budahs.png" alt="hh" />
+				<img v-if="currentReligion==='christian'" src="~@/assets/baby_christians.png" alt="hh" />
+				<img v-if="currentReligion==='hindi'" src="~@/assets/baby_hindus.png" alt="hh" />
+				<img v-if="currentReligion==='islam'" src="~@/assets/baby_islams.png" alt="hh" />
 
 				<div class="conver-wrap">
 					<div v-if="initial">

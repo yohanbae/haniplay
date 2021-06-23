@@ -34,110 +34,176 @@ const routes = [
     ]
     } 
   },
-  { path: '/izgym', name: 'Izgym', component: () => import('../views/izgym/Izgym.vue'), meta: { title: 'IZ*GYM',
+  { path: '/vlive', name: 'Vlive', component: () => import('../views/vlive/Vlive.vue'), meta: { title: 'VLIVE PLAYTIME',
     metaTags: [
       {
         name: 'description',
-        content: '아이즈원 운동법'
+        content: 'Mememories of the Kpop Artists'
       },
       {
         property: 'og:description',
-        content: '아이즈원 운동법'
+        content: 'Mememories of the Kpop Artists'
       }
     ]
     } 
   },
-  { path: '/izgym/settings', name: 'Settings', component: () => import('../views/izgym/Settings.vue'), meta: { title: 'IZ*GYM',
+  { path: '/vlive/group/:groupname', name: 'GroupView', component: () => import('../views/vlive/GroupView.vue'), meta: { title: 'VLIVE PLAYTIME',
     metaTags: [
       {
         name: 'description',
-        content: '아이즈원 운동법'
+        content: 'Mememories of the Kpop Artists'
       },
       {
         property: 'og:description',
-        content: '아이즈원 운동법'
+        content: 'Mememories of the Kpop Artists'
       }
     ]
     } 
-  },    
-  { path: '/religion', name: 'Religion', component: () => import('../views/Religion.vue'), meta: { title: 'HEAVEN or HELL',
+  },  
+  { path: '/hoi', name: 'Editor', component: () => import('../views/fb_editor/Editor.vue'), meta: { title: 'HOI',
     metaTags: [
       {
         name: 'description',
-        content: `What if you die tonight, will you go to HEAVEN or HELL? Let's find out how religions talk about this!`
+        content: 'HOI'
       },
       {
         property: 'og:description',
-        content: `What if you die tonight, will you go to HEAVEN or HELL? Let's find out how religions talk about this!`
+        content: 'HOI'
       }
     ]
     } 
-  },
-  { path: '/religion/start', name: 'ReligionStart', component: () => import('../views/ReligionStart.vue'), meta: { title: 'HEAVEN or HELL',
+  },  
+  { path: '/kpop', name: 'Kpop', component: () => import('../views/kpop/Kpop.vue'), meta: { title: 'Find the cheapest Kpop platform',
     metaTags: [
       {
         name: 'description',
-        content: `What if you die tonight, will you go to HEAVEN or HELL? Let's find out how religions talk about this!`
+        content: 'HOI'
       },
       {
         property: 'og:description',
-        content: `What if you die tonight, will you go to HEAVEN or HELL? Let's find out how religions talk about this!`
+        content: 'HOI'
       }
     ]
     } 
-  },
-  { path: '/religion/ko', name: 'ReligionKo', component: () => import('../views/ko/ReligionKo.vue'), meta: { title: 'HEAVEN or HELL KO',
+  },  
+  { path: '/moi', name: 'EditorKpop', component: () => import('../views/fb_editor/EditorKpop.vue'), meta: { title: 'MOI',
     metaTags: [
       {
         name: 'description',
-        content: `오늘 밤 내가 죽는다면 나는 어디로 가게 될까? 간단한 설문으로 각 종교별 대답을 알아보자`
+        content: 'HOI'
       },
       {
         property: 'og:description',
-        content: `오늘 밤 내가 죽는다면 나는 어디로 가게 될까? 간단한 설문으로 각 종교별 대답을 알아보자`
+        content: 'HOI'
       }
     ]
     } 
-  },
-  { path: '/religion/ko/start', name: 'ReligionStartKo', component: () => import('../views/ko/ReligionStartKo.vue'), meta: { title: 'HEAVEN or HELL KO',
-    metaTags: [
-      {
-        name: 'description',
-        content: `오늘 밤 내가 죽는다면 나는 어디로 가게 될까? 간단한 설문으로 각 종교별 대답을 알아보자`
-      },
-      {
-        property: 'og:description',
-        content: `오늘 밤 내가 죽는다면 나는 어디로 가게 될까? 간단한 설문으로 각 종교별 대답을 알아보자`
-      }
-    ]
-    } 
-  },
-  { path: '/religion/jp', name: 'ReligionJp', component: () => import('../views/jp/ReligionJp.vue'), meta: { title: 'HEAVEN or HELL JP',
-    metaTags: [
-      {
-        name: 'description',
-        content: '今夜私が死んだら私はどこに行くことになるだろうか。 簡単な設問で各宗教の答えを調べてみよう'
-      },
-      {
-        property: 'og:description',
-        content: '今夜私が死んだら私はどこに行くことになるだろうか。 簡単な設問で各宗教の答えを調べてみよう'
-      }
-    ]
-    } 
-  },
-  { path: '/religion/jp/start', name: 'ReligionStartJp', component: () => import('../views/jp/ReligionStartJp.vue'), meta: { title: 'HEAVEN or HELL JP',
-    metaTags: [
-      {
-        name: 'description',
-        content: '今夜私が死んだら私はどこに行くことになるだろうか。 簡単な設問で各宗教の答えを調べてみよう'
-      },
-      {
-        property: 'og:description',
-        content: '今夜私が死んだら私はどこに行くことになるだろうか。 簡単な設問で各宗教の答えを調べてみよう'
-      }
-    ]
-    } 
-  },
+  },  
+
+  // { path: '/izgym', name: 'Izgym', component: () => import('../views/izgym/Izgym.vue'), meta: { title: 'IZ*GYM',
+  //   metaTags: [
+  //     {
+  //       name: 'description',
+  //       content: '아이즈원 운동법'
+  //     },
+  //     {
+  //       property: 'og:description',
+  //       content: '아이즈원 운동법'
+  //     }
+  //   ]
+  //   } 
+  // },
+  // { path: '/izgym/settings', name: 'Settings', component: () => import('../views/izgym/Settings.vue'), meta: { title: 'IZ*GYM',
+  //   metaTags: [
+  //     {
+  //       name: 'description',
+  //       content: '아이즈원 운동법'
+  //     },
+  //     {
+  //       property: 'og:description',
+  //       content: '아이즈원 운동법'
+  //     }
+  //   ]
+  //   } 
+  // },    
+  // { path: '/religion', name: 'Religion', component: () => import('../views/Religion.vue'), meta: { title: 'HEAVEN or HELL',
+  //   metaTags: [
+  //     {
+  //       name: 'description',
+  //       content: `What if you die tonight, will you go to HEAVEN or HELL? Let's find out how religions talk about this!`
+  //     },
+  //     {
+  //       property: 'og:description',
+  //       content: `What if you die tonight, will you go to HEAVEN or HELL? Let's find out how religions talk about this!`
+  //     }
+  //   ]
+  //   } 
+  // },
+  // { path: '/religion/start', name: 'ReligionStart', component: () => import('../views/ReligionStart.vue'), meta: { title: 'HEAVEN or HELL',
+  //   metaTags: [
+  //     {
+  //       name: 'description',
+  //       content: `What if you die tonight, will you go to HEAVEN or HELL? Let's find out how religions talk about this!`
+  //     },
+  //     {
+  //       property: 'og:description',
+  //       content: `What if you die tonight, will you go to HEAVEN or HELL? Let's find out how religions talk about this!`
+  //     }
+  //   ]
+  //   } 
+  // },
+  // { path: '/religion/ko', name: 'ReligionKo', component: () => import('../views/ko/ReligionKo.vue'), meta: { title: 'HEAVEN or HELL KO',
+  //   metaTags: [
+  //     {
+  //       name: 'description',
+  //       content: `오늘 밤 내가 죽는다면 나는 어디로 가게 될까? 간단한 설문으로 각 종교별 대답을 알아보자`
+  //     },
+  //     {
+  //       property: 'og:description',
+  //       content: `오늘 밤 내가 죽는다면 나는 어디로 가게 될까? 간단한 설문으로 각 종교별 대답을 알아보자`
+  //     }
+  //   ]
+  //   } 
+  // },
+  // { path: '/religion/ko/start', name: 'ReligionStartKo', component: () => import('../views/ko/ReligionStartKo.vue'), meta: { title: 'HEAVEN or HELL KO',
+  //   metaTags: [
+  //     {
+  //       name: 'description',
+  //       content: `오늘 밤 내가 죽는다면 나는 어디로 가게 될까? 간단한 설문으로 각 종교별 대답을 알아보자`
+  //     },
+  //     {
+  //       property: 'og:description',
+  //       content: `오늘 밤 내가 죽는다면 나는 어디로 가게 될까? 간단한 설문으로 각 종교별 대답을 알아보자`
+  //     }
+  //   ]
+  //   } 
+  // },
+  // { path: '/religion/jp', name: 'ReligionJp', component: () => import('../views/jp/ReligionJp.vue'), meta: { title: 'HEAVEN or HELL JP',
+  //   metaTags: [
+  //     {
+  //       name: 'description',
+  //       content: '今夜私が死んだら私はどこに行くことになるだろうか。 簡単な設問で各宗教の答えを調べてみよう'
+  //     },
+  //     {
+  //       property: 'og:description',
+  //       content: '今夜私が死んだら私はどこに行くことになるだろうか。 簡単な設問で各宗教の答えを調べてみよう'
+  //     }
+  //   ]
+  //   } 
+  // },
+  // { path: '/religion/jp/start', name: 'ReligionStartJp', component: () => import('../views/jp/ReligionStartJp.vue'), meta: { title: 'HEAVEN or HELL JP',
+  //   metaTags: [
+  //     {
+  //       name: 'description',
+  //       content: '今夜私が死んだら私はどこに行くことになるだろうか。 簡単な設問で各宗教の答えを調べてみよう'
+  //     },
+  //     {
+  //       property: 'og:description',
+  //       content: '今夜私が死んだら私はどこに行くことになるだろうか。 簡単な設問で各宗教の答えを調べてみよう'
+  //     }
+  //   ]
+  //   } 
+  // },
   { path: '/egg', name: 'Egg', component: () => import('../views/egg/Egg.vue'), meta: { title: 'Egg Boil Timer',
     metaTags: [
       {

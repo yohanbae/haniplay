@@ -4,7 +4,7 @@
     </div> -->
 		<div class="main">
 			<div class="main-wrap">
-				<img src="../assets/baby_defaults.png" alt="hh" />
+				<img src="~@/assets/baby_defaults.png" alt="hh" />
 				<div class="conver-wrap">
 					What if you die tonight<br />
 					Will you go to HEAVEN or HELL?<br />
@@ -17,8 +17,8 @@
 				<v-icon>mdi-hinduism</v-icon>
 				</div>
 			</div>
-			<img class="heaven" src="../assets/heaven.png" alt="heaven" />
-			<img class="hell" src="../assets/hell.png" alt="hell" />
+			<img class="heaven" src="~@/assets/heaven.png" alt="heaven" />
+			<img class="hell" src="~@/assets/hell.png" alt="hell" />
 			<div class="titles">HEAVEN or HELL</div>
 			<button class="thebutton mt-5" @click="onStart">START GAME</button>
 		</div>
