@@ -176,17 +176,24 @@ export default {
 			this.loadingCompleted = false
 			this.select = this.years[0]
             try {
-                const meme = firebase.firestore().collection('vlive').doc('vlivedata')				
-				const rawData = await meme.get();
+                const meme2021 = firebase.firestore().collection('vlive2021').doc('vlivedata')				
+				const rawData2021 = await meme2021.get();
+
+                const meme2020 = firebase.firestore().collection('vlive2020').doc('vlivedata')				
+				const rawData2020 = await meme2020.get();
                 // const vliveData = meme.docs.map(doc => doc.data())
 
-				if(!rawData.exists){
+				if(!rawData2021.exists){
 					console.log("something wrong")
 				}else{
-					const vliveData = rawData.data().vlivemap
+					const vRaw2021 = rawData2021.data().vlivemap
+					const vRaw2020 = rawData2020.data().vlivemap
+
+					// const vliveData = rawData.data().vlivemap
+					const vliveData = [...vRaw2021, ...vRaw2020]
 					this.filteredData = vliveData.filter(d => d.datecode.includes(this.currYear))
 
-					this.grouplist = rawData.data().group_data
+					this.grouplist = rawData2021.data().group_data
 
 					const lastDateRange = this.filteredData.sort((a,b) => parseInt(b.datecode) - parseInt(a.datecode))
 					this.lastDate = lastDateRange[0].date

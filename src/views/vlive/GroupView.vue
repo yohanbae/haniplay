@@ -155,13 +155,19 @@ export default {
             try {
                 // const meme = await firebase.firestore().collection('vlive').get()
                 // const vliveData = meme.docs.map(doc => doc.data())
+                const meme2021 = firebase.firestore().collection('vlive2021').doc('vlivedata')				
+				const rawData2021 = await meme2021.get();
 
-                const meme = firebase.firestore().collection('vlive').doc('vlivedata')				
-				const rawData = await meme.get();
-				if(!rawData.exists){
+                const meme2020 = firebase.firestore().collection('vlive2020').doc('vlivedata')				
+				const rawData2020 = await meme2020.get();
+
+				if(!rawData2021.exists){
 					console.log("something wrong")
 				}else{
-					const vliveData = rawData.data().vlivemap
+					const vRaw2021 = rawData2021.data().vlivemap
+					const vRaw2020 = rawData2020.data().vlivemap
+					const vliveData = [...vRaw2021, ...vRaw2020]					
+
 					this.filteredData = vliveData.filter(d => d.datecode.includes(this.currYear)).filter(v => v.name.toLowerCase() === this.$route.params.groupname.toLowerCase())	
 					const optionData = vliveData.filter(v => v.name.toLowerCase() === this.$route.params.groupname.toLowerCase())
 					const sortedOption = optionData.sort((a,b) => parseInt(a.datecode) - parseInt(b.datecode))
